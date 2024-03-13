@@ -42,7 +42,7 @@
 body
 {
 	font-family: 'Rubik', sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
 	background: #FFFFFF;
 	color: #a5a5a5;
@@ -62,8 +62,8 @@ ul
 }
 p
 {
-	font-family: 'Raleway', sans-serif;
-	font-size: 15px;
+	font-family: 'Rubik', sans-serif;
+	font-size: 16px;
 	line-height: 2;
 	font-weight: 500;
 	color: #6d6d6d;
@@ -386,13 +386,13 @@ section
 	width: 100%;
 	height: 100%;
 	line-height: 54px;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	color: #ffffff;
 }
 .header_phone
 {
-	width: 190px;
+	width: 160px;
 	height: 54px;
 	background: #1ab09f;
 	margin-left: 14px;
@@ -403,7 +403,6 @@ section
 	font-size: 16px;
 	font-weight: 500;
 	color: #ffffff;
-	margin-left: 9px;
 }
 .header_phone span::selection
 {
@@ -508,7 +507,7 @@ section
 {
 	display: inline-block;
 	position: relative;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	color: rgba(0,0,0,0.5);
 }
@@ -633,19 +632,25 @@ section
 	height: 54px;
 	background: rgba(255,255,255,0.2);
 	border: solid 2px #ffffff;
-	padding-left: 27px;
-	font-size: 14px;
+	padding-left: 19px;
+	font-size: 16px;
 	font-weight: 500;
 	color: #ffffff;
 	outline: none;
+
 }
 .booking_input_container
 {
-	width: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 .booking_input_container > div
 {
 	padding-right: 10px;
+    flex: 1;
 }
 .booking_input_container > div:first-child,
 .booking_input_container > div:nth-child(2)
@@ -680,31 +685,31 @@ input[type=number]::-webkit-outer-spin-button
 }
 .booking_input::-webkit-input-placeholder
 {
-	font-size: 14px !important;
+	font-size: 16px !important;
 	font-weight: 500 !important;
 	color: #FFFFFF !important;
 }
 .booking_input:-moz-placeholder
 {
-	font-size: 14px !important;
+	font-size: 16px !important;
 	font-weight: 500 !important;
 	color: #FFFFFF !important;
 }
 .booking_input::-moz-placeholder
 {
-	font-size: 14px !important;
+	font-size: 16px !important;
 	font-weight: 500 !important;
 	color: #FFFFFF !important;
 } 
 .booking_input:-ms-input-placeholder
 { 
-	font-size: 14px !important;
+	font-size: 16px !important;
 	font-weight: 500 !important;
 	color: #FFFFFF !important;
 }
 .booking_input::input-placeholder
 {
-	font-size: 14px !important;
+	font-size: 16px !important;
 	font-weight: 500 !important;
 	color: #FFFFFF !important;
 }
@@ -713,7 +718,7 @@ input[type=number]::-webkit-outer-spin-button
 	width: 152px;
 	height: 54px;
 	background: #1ab09f;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	color: #ffffff;
 	border: none;
