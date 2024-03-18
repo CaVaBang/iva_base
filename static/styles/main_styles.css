@@ -41,7 +41,7 @@
 }
 body
 {
-	font-family: 'Rubik', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-weight: 600;
 	background: #FFFFFF;
@@ -62,7 +62,7 @@ ul
 }
 p
 {
-	font-family: 'Rubik', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	line-height: 2;
 	font-weight: 600;
@@ -76,7 +76,7 @@ p a
 	display: inline;
 	position: relative;
 	color: inherit;
-	border-bottom: solid 1px #ffa07f;
+	border-bottom: solid 1px #1ab09f;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -110,7 +110,7 @@ p a:active
 p a:hover
 {
 	color: #FFFFFF;
-	background: #ffa07f;
+	background: #1ab09f;
 }
 p a:hover::after
 {
@@ -118,7 +118,7 @@ p a:hover::after
 }
 ::selection
 {
-	background: rgba(255,163,123,1);
+	background: rgba(26,176,159,1);
 	color: #ffffff;
 }
 p::selection
@@ -132,7 +132,7 @@ h4{font-size: 18px;}
 h5{font-size: 14px;}
 h1, h2, h3, h4, h5, h6
 {
-	font-family: 'Rubik', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -399,7 +399,7 @@ section
 }
 .header_phone span
 {
-	font-family: 'Rubik', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-weight: 600;
 	color: #ffffff;
@@ -848,6 +848,10 @@ input[type=number]::-webkit-outer-spin-button
 	background: rgba(13,11,24,0.79);
 	pointer-events: none;
 }
+.test_slider_parent {
+  display: flex;
+  align-items: stretch;
+}
 .test_slider_item
 {
 	background: #ffffff;
@@ -1075,54 +1079,38 @@ input[type=number]::-webkit-outer-spin-button
 	background: #ffffff;
 	padding-top: 81px;
 }
-.footer_content
-{
-	padding-bottom: 52px;
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.footer_logo
-{
-	text-align: right;
-	margin-left: auto;
-	margin-right: auto;
+
+.footer_col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
+
+.footer_logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.footer_title, .footer_list ul, .footer_list ul li {
+  text-align: center; /* Центрирование заголовков и списков */
+}
+
+/* Может потребоваться обнуление внешних отступов */
+.footer_row {
+  margin: 0;
+}
+
+/* Добавьте эти стили, чтобы убедиться, что логотип отображается по центру */
 .footer_logo img {
-	width: 235px; /* Ширина вашего изображения */
-	height: 74px; /* Высота вашего изображения */
-	border: solid 3px #393939; /* Рамка вокруг изображения, если нужно */
-}
-/*
-.footer_logo > div:first-of-type
-{
-	width: 235px;
-	height: 74px;
-	border: solid 3px #393939;
-	font-size: 43.32px;
-	font-weight: 600;
-	color: #393939;
-	line-height: 68px;
-}
-.footer_logo > div:last-of-type
-{
-	font-size: 16px;
-	font-weight: 600;
-	color: #393939;
-	line-height: 0.75;
-	margin-top: 15px;
-}
-*/
-.footer_logo a
-{
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-}
-.footer_row
-{
-	margin-top: 74px;
+  width: auto; /* или ваше значение ширины, если оно фиксированное */
+  height: auto; /* или ваше значение высоты, если оно фиксированное */
 }
 .footer_title
 {
@@ -1138,7 +1126,7 @@ input[type=number]::-webkit-outer-spin-button
 .footer_list ul li
 {
 	font-size: 15px;
-	font-weight: 500;
+	font-weight: 600;
 	color: #6d6d6d;
 	line-height: 2;
 }
@@ -1166,31 +1154,31 @@ input[type=number]::-webkit-outer-spin-button
 .newsletter_input::-webkit-input-placeholder
 {
 	font-size: 15px !important;
-	font-weight: 500 !important;
+	font-weight: 600 !important;
 	color: #6d6d6d !important;
 }
 .newsletter_input:-moz-placeholder
 {
 	font-size: 15px !important;
-	font-weight: 500 !important;
+	font-weight: 600 !important;
 	color: #6d6d6d !important;
 }
 .newsletter_input::-moz-placeholder
 {
 	font-size: 15px !important;
-	font-weight: 500 !important;
+	font-weight: 600 !important;
 	color: #6d6d6d !important;
 } 
 .newsletter_input:-ms-input-placeholder
 { 
 	font-size: 15px !important;
-	font-weight: 500 !important;
+	font-weight: 600 !important;
 	color: #6d6d6d !important;
 }
 .newsletter_input::input-placeholder
 {
 	font-size: 15px !important;
-	font-weight: 500 !important;
+	font-weight: 600 !important;
 	color: #6d6d6d !important;
 }
 .newsletter_button
@@ -1223,6 +1211,6 @@ input[type=number]::-webkit-outer-spin-button
 	text-align: center;
 	line-height: 33px;
 	font-size: 15px;
-	font-weight: 500;
+	font-weight: 600;
 	color: #6d6d6d;
 }

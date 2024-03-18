@@ -208,6 +208,12 @@
 		padding-left: 30px;
 		padding-right: 30px;
 	}
+	.booking_button
+	{
+		width: 100%; /* Занимает всю ширину контейнера */
+		margin: 15px auto; /* Добавляет отступ сверху и снизу и центрирует кнопку */
+		display: block; /* Обеспечивает, что кнопка будет блочным элементом */
+	}
 	.home_title
 	{
 		font-size: 56px;

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="The River template project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&family=Open+Sans:wght@600&family=PT+Sans:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap-4.1.2/bootstrap.min.css') }}">
 <link href="{{ url_for('static', filename='plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.3.4/owl.carousel.css') }}">
@@ -121,7 +121,7 @@
 						<div class="icon_box_icon"><img src="static/images/base_cabin.png" class="svg"></div>
 						<div class="icon_box_title"><h2>Уютные коттеджи</h2></div>
 						<div class="icon_box_text">
-							<p>Самые удобные дома для заселения</p>
+							<p>Идеальный выбор для тех, кто ищет домашний уют и спокойствие на лоне природы.</p>
 						</div>
 					</div>
 				</div>
@@ -132,7 +132,7 @@
 						<div class="icon_box_icon"><img src="static/images/base_swimming.png" class="svg"></div>
 						<div class="icon_box_title"><h2>Большой бассейн</h2></div>
 						<div class="icon_box_text">
-							<p>Чистый бассеин без ограничений по времени</p>
+							<p>Наслаждайтесь плаванием в нашем просторном бассейне без временных ограничений.</p>
 						</div>
 					</div>
 				</div>
@@ -141,9 +141,9 @@
 				<div class="col-lg-4 icon_box_col">
 					<div class="icon_box d-flex flex-column align-items-center justify-content-start text-center">
 						<div class="icon_box_icon"><img src="static/images/base_trees.png" class="svg"></div>
-						<div class="icon_box_title"><h2>Чистая природа</h2></div>
+						<div class="icon_box_title"><h2>Шикарные виды</h2></div>
 						<div class="icon_box_text">
-							<p>Трава зеленее чем у всех</p>
+							<p>Проведите время среди зелени и покоя, восстанавливая силы и наслаждаясь чистотой природы.</p>
 						</div>
 					</div>
 				</div>
@@ -272,17 +272,6 @@
 
 						<!-- Testimonials Slider -->
 						<div class="owl-carousel owl-theme test_slider">
-							
-							<!-- Slide -->
-							<div  class="test_slider_item text-center">
-								<div class="rating rating_5 d-flex flex-row align-items-start justify-content-center"><i></i><i></i><i></i><i></i><i></i></div>
-								<div class="testimonial_title"><a href="#">Замечательный отдых</a></div>
-								<div class="testimonial_text">
-									<p>База отдыха "Ивушка" поразила своим уютом и красивейшими пейзажами. Обслуживание и кухня на высоте, обязательно вернусь снова.</p>
-								</div>
-								<div class="testimonial_image"><img src="static/images/user_1.jpg" alt=""></div>
-								<div class="testimonial_author"><a href="#">Ольга</a></div>
-							</div>
 
 							<!-- Slide -->
 							<div  class="test_slider_item text-center">
@@ -305,6 +294,18 @@
 								<div class="testimonial_image"><img src="static/images/user_3.jpg" alt=""></div>
 								<div class="testimonial_author"><a href="#">Никита</a></div>
 							</div>
+
+							<!-- Slide -->
+							<div  class="test_slider_item text-center">
+								<div class="rating rating_5 d-flex flex-row align-items-start justify-content-center"><i></i><i></i><i></i><i></i><i></i></div>
+								<div class="testimonial_title"><a href="#">Шикарный отдых</a></div>
+								<div class="testimonial_text">
+									<p>База отдыха "Ивушка" поразила своим уютом и красивейшими пейзажами. Обязательно вернусь снова всей семьей.</p>
+								</div>
+								<div class="testimonial_image"><img src="static/images/user_1.jpg" alt=""></div>
+								<div class="testimonial_author"><a href="#">Ольга</a></div>
+							</div>
+
 
 						</div>
 					</div>
@@ -408,61 +409,41 @@
 	<footer class="footer">
 		<div class="footer_content">
 			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="footer_logo_container text-center">
-                        <div class="footer_logo">
-                            <a href="#">
-                                <img src="static/images/main_logo.jpg" alt="Iva" style="max-width: 100%; height: auto;">
-                            </a>
-							</div>
-						</div>
-					</div>
-				</div>
 				<div class="row footer_row">
 					
 					<!-- Address -->
-					<div class="col-lg-3">
-						<div class="footer_title">Our Address</div>
+					<div class="col-lg-4">
+						<div class="footer_title">Наш адрес</div>
 						<div class="footer_list">
 							<ul>
-								<li>Beach Str. 345</li>
-								<li>67559 Miami</li>
-								<li>USA</li>
+								<li>Астрахань</li>
+								<li>Село Ильинка</li>
+								<li>Шишкина 307</li>
 							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-4">
+						<div class="footer_logo_container text-center">
+							<div class="footer_logo">
+								<a href="#">
+									<img src="static/images/main_logo_new.png" alt="Iva" style="max-width: 100%; height: auto;">
+								</a>
+							</div>
 						</div>
 					</div>
 
 					<!-- Reservations -->
-					<div class="col-lg-3">
-						<div class="footer_title">Reservations</div>
+					<div class="col-lg-4">
+						<div class="footer_title">Бронирование</div>
 						<div class="footer_list">
 							<ul>
-								<li>Tel: 345 5667 889</li>
-								<li>Fax; 6783 4567 889</li>
-								<li>reservations@hotelriver.com</li>
+								<li>Телефон: +7 999 222-33-44</li>
+								<li>reservations@iva.ru</li>
 							</ul>
 						</div>
 					</div>
 
-					<!-- Newsletter -->
-					<div class="col-lg-3">
-						<div class="footer_title">Newsletter</div>
-						<div class="newsletter_container">
-							<form action="#" class="newsletter_form" id="newsletter_form">
-								<input type="email" class="newsletter_input" placeholder="Your email address" required="required">
-								<button class="newsletter_button">Subscribe</button>
-							</form>
-						</div>
-					</div>
-
-					<!-- Footer images -->
-					<div class="col-lg-3">
-						<div class="certificates d-flex flex-row align-items-start justify-content-lg-between justify-content-start flex-lg-nowrap flex-wrap">
-							<div class="cert"><img src="images/cert_1.png" alt=""></div>
-							<div class="cert"><img src="images/cert_2.png" alt=""></div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
