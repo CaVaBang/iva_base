@@ -85,7 +85,6 @@
 
 @media only screen and (max-width: 1280px)
 {
-	
 }
 
 /************
@@ -191,6 +190,12 @@
 	{
 		padding-bottom: 116px;
 	}
+	.about_title
+	{
+        max-width: 100%;
+        text-align: center;
+    }
+}
 }
 
 /************
@@ -208,7 +213,12 @@
 
 @media only screen and (max-width: 1024px)
 {
-	
+	.about_title
+	{
+        max-width: 100%;
+        text-align: center;
+    }
+}
 }
 
 /************

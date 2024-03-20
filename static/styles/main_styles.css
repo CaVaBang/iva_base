@@ -25,7 +25,8 @@
 1. Fonts
 ***********/
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800,900&display=swap');
+
 
 /*********************************
 2. Body and some general stuff
@@ -65,7 +66,7 @@ p
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	line-height: 2;
-	font-weight: 600;
+	font-weight: 400;
 	color: #6d6d6d;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -715,7 +716,7 @@ input[type=number]::-webkit-outer-spin-button
 }
 .booking_button
 {
-	width: 152px;
+	width: 100%;
 	height: 54px;
 	background: #1ab09f;
 	font-size: 16px;
@@ -1099,18 +1100,16 @@ input[type=number]::-webkit-outer-spin-button
 }
 
 .footer_title, .footer_list ul, .footer_list ul li {
-  text-align: center; /* Центрирование заголовков и списков */
+  text-align: center;
 }
 
-/* Может потребоваться обнуление внешних отступов */
 .footer_row {
   margin: 0;
 }
 
-/* Добавьте эти стили, чтобы убедиться, что логотип отображается по центру */
 .footer_logo img {
-  width: auto; /* или ваше значение ширины, если оно фиксированное */
-  height: auto; /* или ваше значение высоты, если оно фиксированное */
+  width: auto;
+  height: auto;
 }
 .footer_title
 {
@@ -1126,7 +1125,7 @@ input[type=number]::-webkit-outer-spin-button
 .footer_list ul li
 {
 	font-size: 15px;
-	font-weight: 600;
+	font-weight: 500;
 	color: #6d6d6d;
 	line-height: 2;
 }

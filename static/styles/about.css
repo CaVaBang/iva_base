@@ -23,7 +23,7 @@
 1. Fonts
 ***********/
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800,900&display=swap');
 
 /*********************************
 2. Body and some general stuff
@@ -39,9 +39,9 @@
 }
 body
 {
-	font-family: 'Raleway', sans-serif;
-	font-size: 14px;
-	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
 	background: #FFFFFF;
 	color: #a5a5a5;
 }
@@ -60,10 +60,10 @@ ul
 }
 p
 {
-	font-family: 'Raleway', sans-serif;
-	font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
 	line-height: 2;
-	font-weight: 500;
+	font-weight: 400;
 	color: #6d6d6d;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -74,7 +74,7 @@ p a
 	display: inline;
 	position: relative;
 	color: inherit;
-	border-bottom: solid 1px #ffa07f;
+	border-bottom: solid 1px #1ab09f;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -108,7 +108,7 @@ p a:active
 p a:hover
 {
 	color: #FFFFFF;
-	background: #ffa07f;
+	background: #1ab09f;
 }
 p a:hover::after
 {
@@ -130,7 +130,7 @@ h4{font-size: 18px;}
 h5{font-size: 14px;}
 h1, h2, h3, h4, h5, h6
 {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -371,13 +371,13 @@ section
 .main_nav ul li a:hover,
 .main_nav ul li.active a
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .book_button
 {
 	width: 152px;
 	height: 54px;
-	background: #ffa37b;
+	background: #1ab09f;
 	margin-left: 45px;
 	text-align: center;
 	-webkit-transition: all 200ms ease;
@@ -392,7 +392,7 @@ section
 }
 .book_button:hover a
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .book_button a
 {
@@ -400,28 +400,28 @@ section
 	width: 100%;
 	height: 100%;
 	line-height: 54px;
-	font-size: 14px;
-	font-weight: 500;
+	font-size: 16px;
+	font-weight: 600;
 	color: #ffffff;
 }
 .header_phone
 {
-	width: 190px;
+	width: 160px;
 	height: 54px;
-	background: #ffa37b;
+	background: #1ab09f;
 	margin-left: 14px;
 }
 .header_phone span
 {
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 600;
 	color: #ffffff;
-	margin-left: 9px;
 }
 .header_phone span::selection
 {
 	background: #ffffff;
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .hamburger
 {
@@ -441,7 +441,7 @@ section
 }
 .hamburger:hover i
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 
 /*********************************
@@ -485,7 +485,7 @@ section
 }
 .menu_close:hover i
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .menu_nav ul li:not(:last-of-type)
 {
@@ -500,7 +500,7 @@ section
 }
 .menu_nav ul li a:hover
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .menu_nav ul li a span
 {
@@ -543,11 +543,11 @@ section
 }
 .menu_book a:hover
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .menu_book a:hover::after
 {
-	background: #ffa37b;
+	background: #1ab09f;
 }
 .menu_phone
 {
@@ -604,6 +604,9 @@ section
 	margin-top: 34px;
 	padding-left: 78px;
 	padding-right: 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .booking_form
 {
@@ -616,19 +619,24 @@ section
 	height: 54px;
 	background: rgba(255,255,255,0.2);
 	border: solid 2px #ffffff;
-	padding-left: 27px;
-	font-size: 14px;
-	font-weight: 500;
+	padding-left: 19px;
+	font-size: 16px;
+	font-weight: 600;
 	color: #ffffff;
 	outline: none;
 }
 .booking_input_container
 {
-	width: 100%;
+	display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 .booking_input_container > div
 {
 	padding-right: 10px;
+    flex: 1;
 }
 .booking_input_container > div:first-child,
 .booking_input_container > div:nth-child(2)
@@ -663,41 +671,41 @@ input[type=number]::-webkit-outer-spin-button
 }
 .booking_input::-webkit-input-placeholder
 {
-	font-size: 14px !important;
-	font-weight: 500 !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
 	color: #FFFFFF !important;
 }
 .booking_input:-moz-placeholder
 {
-	font-size: 14px !important;
-	font-weight: 500 !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
 	color: #FFFFFF !important;
 }
 .booking_input::-moz-placeholder
 {
-	font-size: 14px !important;
-	font-weight: 500 !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
 	color: #FFFFFF !important;
 } 
 .booking_input:-ms-input-placeholder
 { 
-	font-size: 14px !important;
-	font-weight: 500 !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
 	color: #FFFFFF !important;
 }
 .booking_input::input-placeholder
 {
-	font-size: 14px !important;
-	font-weight: 500 !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
 	color: #FFFFFF !important;
 }
 .booking_button
 {
-	width: 152px;
+	width: 100%;
 	height: 54px;
-	background: #ffa37b;
-	font-size: 14px;
-	font-weight: 500;
+	background: #1ab09f;
+	font-size: 16px;
+	font-weight: 600;
 	color: #ffffff;
 	border: none;
 	outline: none;
@@ -718,10 +726,21 @@ input[type=number]::-webkit-outer-spin-button
 	padding-top: 107px;
 	padding-bottom: 104px;
 }
-.about_title
-{
-	max-width: 585px;
+.about_title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
 }
+
+.about_title h2 {
+    border: 3px solid #000; /* Делаем рамку толще */
+    padding: 10px; /* Добавляем небольшой отступ вокруг текста */
+    display: inline-block; /* Делаем блок вокруг текста по его размеру */
+    margin: 40px auto; /* Добавляем отступы сверху и снизу, центрируем блок */
+    text-align: center; /* Убеждаемся, что текст выровнен по центру внутри рамки */
+}
+
 .about_row
 {
 	margin-top: 21px;
@@ -774,7 +793,7 @@ input[type=number]::-webkit-outer-spin-button
 }
 .milestone_counter
 {
-	font-size: 72px;
+	font-size: 60px;
 	color: #393939;
 	font-weight: 600;
 	line-height: 0.75;
@@ -923,7 +942,7 @@ input[type=number]::-webkit-outer-spin-button
 }
 .testimonial_title a:hover
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .testimonial_text
 {
@@ -954,7 +973,7 @@ input[type=number]::-webkit-outer-spin-button
 }
 .testimonial_author a:hover
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 
 /*********************************
@@ -1082,7 +1101,7 @@ input[type=number]::-webkit-outer-spin-button
 {
 	width: 152px;
 	height: 54px;
-	background: #ffa37b;
+	background: #1ab09f;
 	margin-top: 23px;
 	border: none;
 	outline: none;
