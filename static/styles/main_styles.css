@@ -25,7 +25,7 @@
 1. Fonts
 ***********/
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900');
 
 
 /*********************************
@@ -42,9 +42,9 @@
 }
 body
 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
-	font-weight: 600;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
 	background: #FFFFFF;
 	color: #a5a5a5;
 }
@@ -63,10 +63,10 @@ ul
 }
 p
 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px;
 	line-height: 2;
-	font-weight: 400;
+	font-weight: 500;
 	color: #6d6d6d;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -133,7 +133,7 @@ h4{font-size: 18px;}
 h5{font-size: 14px;}
 h1, h2, h3, h4, h5, h6
 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -352,7 +352,7 @@ section
 .main_nav ul li a
 {
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 500;
 	color: #ffffff;
 }
 .main_nav ul li a:hover,
@@ -387,22 +387,21 @@ section
 	width: 100%;
 	height: 100%;
 	line-height: 54px;
-	font-size: 16px;
-	font-weight: 600;
+	font-size: 14px;
+	font-weight: 500;
 	color: #ffffff;
 }
 .header_phone
 {
-	width: 160px;
+	width: 190px;
 	height: 54px;
 	background: #1ab09f;
 	margin-left: 14px;
 }
 .header_phone span
 {
-	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 500;
 	color: #ffffff;
 }
 .header_phone span::selection
@@ -508,8 +507,8 @@ section
 {
 	display: inline-block;
 	position: relative;
-	font-size: 16px;
-	font-weight: 600;
+	font-size: 14px;
+	font-weight: 500;
 	color: rgba(0,0,0,0.5);
 }
 .menu_book a::after
@@ -543,7 +542,7 @@ section
 .menu_phone span
 {
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 500;
 	color: rgba(0,0,0,0.5);
 	margin-left: 9px;
 }
@@ -634,8 +633,8 @@ section
 	background: rgba(255,255,255,0.2);
 	border: solid 2px #ffffff;
 	padding-left: 19px;
-	font-size: 16px;
-	font-weight: 600;
+	font-size: 14px;
+	font-weight: 500;
 	color: #ffffff;
 	outline: none;
 
@@ -686,32 +685,32 @@ input[type=number]::-webkit-outer-spin-button
 }
 .booking_input::-webkit-input-placeholder
 {
-	font-size: 16px !important;
-	font-weight: 600 !important;
+	font-size: 14px !important;
+	font-weight: 500 !important;
 	color: #FFFFFF !important;
 }
 .booking_input:-moz-placeholder
 {
-	font-size: 16px !important;
-	font-weight: 600 !important;
+	font-size: 14px !important;
+	font-weight: 500 !important;
 	color: #FFFFFF !important;
 }
 .booking_input::-moz-placeholder
 {
-	font-size: 16px !important;
-	font-weight: 600 !important;
+	font-size: 14px !important;
+	font-weight: 500 !important;
 	color: #FFFFFF !important;
 } 
 .booking_input:-ms-input-placeholder
 { 
-	font-size: 16px !important;
-	font-weight: 600 !important;
+	font-size: 14px !important;
+	font-weight: 500 !important;
 	color: #FFFFFF !important;
 }
 .booking_input::input-placeholder
 {
-	font-size: 16px !important;
-	font-weight: 600 !important;
+	font-size: 14px !important;
+	font-weight: 500 !important;
 	color: #FFFFFF !important;
 }
 .booking_button
@@ -719,8 +718,8 @@ input[type=number]::-webkit-outer-spin-button
 	width: 100%;
 	height: 54px;
 	background: #1ab09f;
-	font-size: 16px;
-	font-weight: 600;
+	font-size: 14px;
+	font-weight: 500;
 	color: #ffffff;
 	border: none;
 	outline: none;
@@ -1080,7 +1079,8 @@ input[type=number]::-webkit-outer-spin-button
 	background: #ffffff;
 	padding-top: 81px;
 }
-.footer_content {
+.footer_content
+{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1153,31 +1153,31 @@ input[type=number]::-webkit-outer-spin-button
 .newsletter_input::-webkit-input-placeholder
 {
 	font-size: 15px !important;
-	font-weight: 600 !important;
+	font-weight: 500 !important;
 	color: #6d6d6d !important;
 }
 .newsletter_input:-moz-placeholder
 {
 	font-size: 15px !important;
-	font-weight: 600 !important;
+	font-weight: 500 !important;
 	color: #6d6d6d !important;
 }
 .newsletter_input::-moz-placeholder
 {
 	font-size: 15px !important;
-	font-weight: 600 !important;
+	font-weight: 500 !important;
 	color: #6d6d6d !important;
 } 
 .newsletter_input:-ms-input-placeholder
 { 
 	font-size: 15px !important;
-	font-weight: 600 !important;
+	font-weight: 500 !important;
 	color: #6d6d6d !important;
 }
 .newsletter_input::input-placeholder
 {
 	font-size: 15px !important;
-	font-weight: 600 !important;
+	font-weight: 500 !important;
 	color: #6d6d6d !important;
 }
 .newsletter_button
@@ -1210,6 +1210,6 @@ input[type=number]::-webkit-outer-spin-button
 	text-align: center;
 	line-height: 33px;
 	font-size: 15px;
-	font-weight: 600;
+	font-weight: 500;
 	color: #6d6d6d;
 }

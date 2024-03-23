@@ -370,13 +370,13 @@ section
 .main_nav ul li a:hover,
 .main_nav ul li.active a
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .book_button
 {
 	width: 152px;
 	height: 54px;
-	background: #ffa37b;
+	background: #1ab09f;
 	margin-left: 45px;
 	text-align: center;
 	-webkit-transition: all 200ms ease;
@@ -391,7 +391,7 @@ section
 }
 .book_button:hover a
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .book_button a
 {
@@ -407,7 +407,7 @@ section
 {
 	width: 190px;
 	height: 54px;
-	background: #ffa37b;
+	background: #1ab09f;
 	margin-left: 14px;
 }
 .header_phone span
@@ -420,7 +420,7 @@ section
 .header_phone span::selection
 {
 	background: #ffffff;
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .hamburger
 {
@@ -440,7 +440,7 @@ section
 }
 .hamburger:hover i
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 
 /*********************************
@@ -484,7 +484,7 @@ section
 }
 .menu_close:hover i
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .menu_nav ul li:not(:last-of-type)
 {
@@ -499,7 +499,7 @@ section
 }
 .menu_nav ul li a:hover
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .menu_nav ul li a span
 {
@@ -542,11 +542,11 @@ section
 }
 .menu_book a:hover
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .menu_book a:hover::after
 {
-	background: #ffa37b;
+	background: #1ab09f;
 }
 .menu_phone
 {
@@ -623,11 +623,16 @@ section
 }
 .booking_input_container
 {
-	width: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 .booking_input_container > div
 {
 	padding-right: 10px;
+    flex: 1;
 }
 .booking_input_container > div:first-child,
 .booking_input_container > div:nth-child(2)
@@ -692,9 +697,9 @@ input[type=number]::-webkit-outer-spin-button
 }
 .booking_button
 {
-	width: 152px;
+	width: 100%;
 	height: 54px;
-	background: #ffa37b;
+	background: #1ab09f;
 	font-size: 14px;
 	font-weight: 500;
 	color: #ffffff;
@@ -746,7 +751,7 @@ input[type=number]::-webkit-outer-spin-button
 	left: 15px;
 	width: calc(100% - 30px);
 	height: 65px;
-	background: #ffa37b;
+	background: #1ab09f;
 	text-align: center;
 	cursor: pointer;
 }
@@ -901,7 +906,7 @@ input[type=number]::-webkit-outer-spin-button
 {
 	width: 152px;
 	height: 54px;
-	background: #ffa37b;
+	background: #1ab09f;
 	text-align: center;
 	margin-top: 26px;
 	-webkit-transition: all 200ms ease;
@@ -969,46 +974,35 @@ input[type=number]::-webkit-outer-spin-button
 }
 .footer_content
 {
-	padding-bottom: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.footer_logo
-{
-	display: inline-block;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+
+.footer_col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.footer_logo > div:first-of-type
-{
-	width: 235px;
-	height: 74px;
-	border: solid 3px #393939;
-	font-size: 43.32px;
-	font-weight: 600;
-	color: #393939;
-	line-height: 68px;
+
+.footer_logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
-.footer_logo > div:last-of-type
-{
-	font-size: 16px;
-	font-weight: 600;
-	color: #393939;
-	line-height: 0.75;
-	margin-top: 15px;
+
+.footer_title, .footer_list ul, .footer_list ul li {
+  text-align: center;
 }
-.footer_logo a
-{
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
+
+.footer_row {
+  margin: 0;
 }
-.footer_row
-{
-	margin-top: 74px;
+
+.footer_logo img {
+  width: auto;
+  height: auto;
 }
 .footer_title
 {
@@ -1083,7 +1077,7 @@ input[type=number]::-webkit-outer-spin-button
 {
 	width: 152px;
 	height: 54px;
-	background: #ffa37b;
+	background: #1ab09f;
 	margin-top: 23px;
 	border: none;
 	outline: none;
