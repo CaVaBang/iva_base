@@ -17,3 +17,19 @@ def about():
 @app.route('/booking.html')
 def booking():
     return render_template('booking.html')
+
+
+@app.route('/elements.html')
+def elements():
+    return render_template('elements.html')
+
+
+@app.route('/blog.html')
+def blog():
+    return render_template('blog.html')
+
+
+
+@app.route('/contact.html')
+def contact():
+    return render_template('contact.html')
