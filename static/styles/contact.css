@@ -71,7 +71,7 @@ p a
 	display: inline;
 	position: relative;
 	color: inherit;
-	border-bottom: solid 1px #ffa07f;
+	border-bottom: solid 1px #1ab09f;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -105,7 +105,7 @@ p a:active
 p a:hover
 {
 	color: #FFFFFF;
-	background: #ffa07f;
+	background: #1ab09f;
 }
 p a:hover::after
 {
@@ -295,7 +295,7 @@ section
 {
 	width: 152px;
 	height: 54px;
-	background: #ffa37b;
+	background: #1ab09f;
 	text-align: center;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -320,7 +320,9 @@ section
 /*********************************
 3. Header
 *********************************/
-
+.header .main_nav {
+  margin-right: 20px; /* Добавляем отступ справа от навигационного меню */
+}
 .header
 {
 	position: fixed;
@@ -393,13 +395,13 @@ section
 .main_nav ul li a:hover,
 .main_nav ul li.active a
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .book_button
 {
 	width: 152px;
 	height: 54px;
-	background: #ffa37b;
+	background: #1ab09f;
 	margin-left: 45px;
 	text-align: center;
 	-webkit-transition: all 200ms ease;
@@ -414,7 +416,7 @@ section
 }
 .book_button:hover a
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .book_button a
 {
@@ -430,7 +432,7 @@ section
 {
 	width: 190px;
 	height: 54px;
-	background: #ffa37b;
+	background: #1ab09f;
 	margin-left: 14px;
 }
 .header_phone span
@@ -443,7 +445,7 @@ section
 .header_phone span::selection
 {
 	background: #ffffff;
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .hamburger
 {
@@ -463,7 +465,7 @@ section
 }
 .hamburger:hover i
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 
 /*********************************
@@ -507,7 +509,7 @@ section
 }
 .menu_close:hover i
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .menu_nav ul li:not(:last-of-type)
 {
@@ -522,7 +524,7 @@ section
 }
 .menu_nav ul li a:hover
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .menu_nav ul li a span
 {
@@ -565,11 +567,11 @@ section
 }
 .menu_book a:hover
 {
-	color: #ffa37b;
+	color: #1ab09f;
 }
 .menu_book a:hover::after
 {
-	background: #ffa37b;
+	background: #1ab09f;
 }
 .menu_phone
 {
@@ -638,19 +640,25 @@ section
 	height: 54px;
 	background: rgba(255,255,255,0.2);
 	border: solid 2px #ffffff;
-	padding-left: 27px;
+	padding-left: 19px;
 	font-size: 14px;
 	font-weight: 500;
 	color: #ffffff;
 	outline: none;
+
 }
 .booking_input_container
 {
-	width: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 .booking_input_container > div
 {
 	padding-right: 10px;
+    flex: 1;
 }
 .booking_input_container > div:first-child,
 .booking_input_container > div:nth-child(2)
@@ -664,7 +672,7 @@ section
 }
 .booking_input_a
 {
-	
+
 }
 .booking_input_b
 {
@@ -674,9 +682,9 @@ section
 	-o-appearance: none;
 	appearance: none;
 }
-input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button
-{ 
+{
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;
@@ -700,9 +708,9 @@ input[type=number]::-webkit-outer-spin-button
 	font-size: 14px !important;
 	font-weight: 500 !important;
 	color: #FFFFFF !important;
-} 
+}
 .booking_input:-ms-input-placeholder
-{ 
+{
 	font-size: 14px !important;
 	font-weight: 500 !important;
 	color: #FFFFFF !important;
@@ -715,9 +723,9 @@ input[type=number]::-webkit-outer-spin-button
 }
 .booking_button
 {
-	width: 152px;
+	width: 100%;
 	height: 54px;
-	background: #ffa37b;
+	background: #1ab09f;
 	font-size: 14px;
 	font-weight: 500;
 	color: #ffffff;
@@ -729,6 +737,7 @@ input[type=number]::-webkit-outer-spin-button
 {
 	background: rgba(255,255,255,0.2);
 }
+
 
 /*********************************
 6. Contact
@@ -760,7 +769,7 @@ input[type=number]::-webkit-outer-spin-button
 }
 .contact_form_container
 {
-	margin-top: 73px;
+	margin-top: 15px;
 }
 .contact_form
 {
@@ -823,7 +832,7 @@ input[type=number]::-webkit-outer-spin-button
 	margin-top: 31px;
 	width: 152px;
 	height: 54px;
-	background: #ffa37b;
+	background: #1ab09f;
 	border: none;
 	outline: none;
 	cursor: pointer;
@@ -878,46 +887,35 @@ input[type=number]::-webkit-outer-spin-button
 }
 .footer_content
 {
-	padding-bottom: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.footer_logo
-{
-	display: inline-block;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+
+.footer_col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.footer_logo > div:first-of-type
-{
-	width: 235px;
-	height: 74px;
-	border: solid 3px #393939;
-	font-size: 43.32px;
-	font-weight: 600;
-	color: #393939;
-	line-height: 68px;
+
+.footer_logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
-.footer_logo > div:last-of-type
-{
-	font-size: 16px;
-	font-weight: 600;
-	color: #393939;
-	line-height: 0.75;
-	margin-top: 15px;
+
+.footer_title, .footer_list ul, .footer_list ul li {
+  text-align: center;
 }
-.footer_logo a
-{
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
+
+.footer_row {
+  margin: 0;
 }
-.footer_row
-{
-	margin-top: 74px;
+
+.footer_logo img {
+  width: auto;
+  height: auto;
 }
 .footer_title
 {
@@ -992,7 +990,7 @@ input[type=number]::-webkit-outer-spin-button
 {
 	width: 152px;
 	height: 54px;
-	background: #ffa37b;
+	background: #1ab09f;
 	margin-top: 23px;
 	border: none;
 	outline: none;

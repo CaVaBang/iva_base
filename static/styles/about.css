@@ -404,6 +404,9 @@ section
 	font-weight: 500;
 	color: #ffffff;
 }
+.header .main_nav {
+  margin-right: 20px; /* Добавляем отступ справа от навигационного меню */
+}
 .header_phone
 {
 	width: 190px;
@@ -416,6 +419,7 @@ section
 	font-size: 16px;
 	font-weight: 500;
 	color: #ffffff;
+	margin-left: 9px;
 }
 .header_phone span::selection
 {
@@ -649,7 +653,7 @@ section
 }
 .booking_input_a
 {
-	
+
 }
 .booking_input_b
 {
@@ -659,9 +663,9 @@ section
 	-o-appearance: none;
 	appearance: none;
 }
-input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button
-{ 
+{
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;
@@ -685,9 +689,9 @@ input[type=number]::-webkit-outer-spin-button
 	font-size: 14px !important;
 	font-weight: 500 !important;
 	color: #FFFFFF !important;
-} 
+}
 .booking_input:-ms-input-placeholder
-{ 
+{
 	font-size: 14px !important;
 	font-weight: 500 !important;
 	color: #FFFFFF !important;
@@ -733,11 +737,11 @@ input[type=number]::-webkit-outer-spin-button
 }
 
 .about_title h2 {
-    border: 3px solid #000; /* Делаем рамку толще */
-    padding: 10px; /* Добавляем небольшой отступ вокруг текста */
-    display: inline-block; /* Делаем блок вокруг текста по его размеру */
-    margin: 40px auto; /* Добавляем отступы сверху и снизу, центрируем блок */
-    text-align: center; /* Убеждаемся, что текст выровнен по центру внутри рамки */
+    border: 3px solid #000;
+    padding: 10px;
+    display: inline-block;
+    margin: 40px auto;
+    text-align: center;
 }
 
 .about_row

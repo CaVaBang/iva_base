@@ -24,10 +24,9 @@ def elements():
     return render_template('elements.html')
 
 
-@app.route('/blog.html')
+@app.route('/map.html')
 def blog():
-    return render_template('blog.html')
-
+    return render_template('map.html')
 
 
 @app.route('/contact.html')

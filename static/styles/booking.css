@@ -403,6 +403,9 @@ section
 	font-weight: 500;
 	color: #ffffff;
 }
+.header .main_nav {
+  margin-right: 20px; /* Добавляем отступ справа от навигационного меню */
+}
 .header_phone
 {
 	width: 190px;
