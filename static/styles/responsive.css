@@ -96,7 +96,14 @@
 
 @media only screen and (max-width: 1100px)
 {
-	
+	.footer_logo img {
+        width: 60%;
+    }
+    .container .about_images {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /************
@@ -105,7 +112,14 @@
 
 @media only screen and (max-width: 1024px)
 {
-	
+	.footer_logo img {
+        width: 60%;
+    }
+    .container .about_images {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /************
@@ -168,6 +182,14 @@
 	{
 		margin-right: 15px;
 	}
+	.footer_logo img {
+        width: 60%;
+    }
+    .container .about_images {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /************
@@ -194,7 +216,14 @@
 
 @media only screen and (max-width: 768px)
 {
-	
+	.footer_logo img {
+        width: 60%;
+    }
+    .container .about_images {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /************
@@ -210,9 +239,9 @@
 	}
 	.booking_button
 	{
-		width: 100%; /* Занимает всю ширину контейнера */
-		margin: 15px auto; /* Добавляет отступ сверху и снизу и центрирует кнопку */
-		display: block; /* Обеспечивает, что кнопка будет блочным элементом */
+		width: 100%;
+		margin: 15px auto;
+		display: block;
 	}
 	.home_title
 	{
@@ -324,6 +353,9 @@
 	{
 		font-size: 24px;
 	}
+	.footer_logo img {
+        width: 60%; /* или другой процент/фиксированное значение */
+    }
 }
 
 /************

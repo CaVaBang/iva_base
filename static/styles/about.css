@@ -511,9 +511,11 @@ section
 }
 .menu_extra
 {
-	position: absolute;
-	right: 30px;
-	bottom: 30px;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    font-weight: bold;
+    color: #000000;
 }
 .menu_book
 {
@@ -558,8 +560,8 @@ section
 }
 .menu_phone span
 {
-	font-size: 16px;
-	font-weight: 500;
+	font-size: 20px;
+	font-weight: 700;
 	color: rgba(0,0,0,0.5);
 	margin-left: 9px;
 }

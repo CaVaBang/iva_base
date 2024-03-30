@@ -226,7 +226,7 @@ $(document).ready(function()
 				loop:false,
 				autoplay:false,
 				dots:false,
-				nav:false,
+				nav:true,
 				smartSpeed:1200,
 				responsive:
 				{
@@ -268,7 +268,7 @@ $(document).ready(function()
 				loop:true,
 				smartSpeed:1200,
 				dots:false,
-				nav:false,
+				nav:true,
 				margin:30,
 				autoplayHoverPause:true,
 				responsive:
@@ -300,7 +300,7 @@ $(document).ready(function()
 				loop:true,
 				smartSpeed:1200,
 				dots:false,
-				nav:false,
+				nav:true,
 				margin:30,
 				responsive:
 				{
@@ -330,7 +330,7 @@ $(document).ready(function()
 				loop:true,
 				smartSpeed:1200,
 				dots:false,
-				nav:false,
+				nav:true,
 				margin:2,
 				responsive:
 				{

@@ -277,6 +277,7 @@ section
 {
 	height: 100%;
 }
+
 .slide
 {
 	height: 100%;
@@ -498,9 +499,11 @@ section
 }
 .menu_extra
 {
-	position: absolute;
-	right: 30px;
-	bottom: 30px;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    font-weight: bold;
+    color: #000000;
 }
 .menu_book
 {
@@ -545,8 +548,8 @@ section
 }
 .menu_phone span
 {
-	font-size: 16px;
-	font-weight: 500;
+	font-size: 20px;
+	font-weight: 700;
 	color: rgba(0,0,0,0.5);
 	margin-left: 9px;
 }
@@ -859,10 +862,14 @@ input[type=number]::-webkit-outer-spin-button
 .test_slider_item
 {
 	background: #ffffff;
-	padding-top: 43px;
-	padding-bottom: 58px;
-	padding-left: 45px;
-	padding-right: 45px;
+    padding-top: 43px;
+    padding-bottom: 58px;
+    padding-left: 45px;
+    padding-right: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 .rating i::before
 {
@@ -909,16 +916,17 @@ input[type=number]::-webkit-outer-spin-button
 .testimonial_text
 {
 	margin-top: 24px;
+	margin-bottom: 20px; /* Отступ снизу для текста отзыва */
 }
 .testimonial_image
 {
-	width: 106px;
-	height: 106px;
-	border-radius: 50%;
-	overflow: hidden;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 12px;
+    margin-top: auto; /* Это выровняет изображение по нижней части */
+    width: 106px; /* фиксированная ширина */
+    height: 106px; /* и высота */
+    border-radius: 50%; /* круглое изображение */
+    overflow: hidden; /* обрезаем изображение по форме контейнера */
+    margin-left: auto; /* выравнивание по горизонтали */
+    margin-right: auto; /* выравнивание по горизонтали */
 }
 .testimonial_author
 {
