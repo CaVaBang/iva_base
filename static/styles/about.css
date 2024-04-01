@@ -121,7 +121,7 @@ p a:hover::after
 }
 p::selection
 {
-	
+
 }
 h1{font-size: 48px;}
 h2{font-size: 36px;}
@@ -138,14 +138,14 @@ h1, h2, h3, h4, h5, h6
 	color: #393939;
 	font-weight: 600;
 }
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
 h6::selection
 {
-	
+
 }
 img
 {
@@ -404,8 +404,9 @@ section
 	font-weight: 500;
 	color: #ffffff;
 }
-.header .main_nav {
-  margin-right: 20px; /* Добавляем отступ справа от навигационного меню */
+.header .main_nav
+{
+  margin-right: 20px;
 }
 .header_phone
 {
@@ -591,10 +592,6 @@ section
 	transform: translateY(-50%);
 	left: 0;
 	width: 100%;
-}
-.home_content
-{
-
 }
 .home_title
 {
@@ -1114,9 +1111,9 @@ input[type=number]::-webkit-outer-spin-button
 	font-size: 15px !important;
 	font-weight: 500 !important;
 	color: #6d6d6d !important;
-} 
+}
 .newsletter_input:-ms-input-placeholder
-{ 
+{
 	font-size: 15px !important;
 	font-weight: 500 !important;
 	color: #6d6d6d !important;

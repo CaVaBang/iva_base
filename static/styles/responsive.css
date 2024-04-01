@@ -327,8 +327,10 @@
 	}
 	.booking_button
 	{
-		width: 125px;
-		height: 44px;
+		width: 100%;
+		height: 40px;
+		margin: 15px auto;
+		display: block;
 	}
 	.home_slider_dots_container
 	{
