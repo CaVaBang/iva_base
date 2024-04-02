@@ -154,15 +154,15 @@
 	}
 	.split_section_right_content
 	{
-		padding-left: 0;
+		padding-left: 40px;
 		padding-right: 0;
 		padding-top: 0;
 		padding-bottom: 0;
 	}
 	.split_section_left_content
 	{
-		padding-left: 0;
-		padding-top: 116px;
+		padding-left: 40px;
+		padding-top: 50px;
 		padding-right: 0;
 		padding-bottom: 0;
 	}
@@ -193,11 +193,11 @@
 	}
 	.loaders_container
 	{
-		margin-left: 0;
+		margin-left: -50px;
 	}
 	.split_section_left
 	{
-		padding-bottom: 116px;
+		padding-bottom: 0px;
 	}
 	.booking_form > div > div:last-child
 	{
@@ -370,6 +370,16 @@
 	{
 		font-size: 56px;
 	}
+	.custom-container
+	{
+        justify-content: initial !important;
+    }
+	.milestones_container
+	{
+	    font-size: 36px;
+        padding-left: 60px;
+        padding-right: 0px;
+	}
 	.milestone_counter
 	{
 		font-size: 56px;
@@ -471,9 +481,19 @@
 	{
 		font-size: 36px;
 	}
+	.milestones_container
+	{
+	    font-size: 36px;
+        padding-left: 60px;
+        padding-right: 0px;
+	}
 	.milestone_counter
 	{
-		font-size: 48px;
+		font-size: 36px;
+		padding-top: 10px;
+		display: flex;
+        justify-content: space-around;
+        align-items: center;
 	}
 	.milestone_title
 	{
@@ -492,7 +512,24 @@
 
 @media only screen and (max-width: 539px)
 {
-	
+	.split_section_right_content
+	{
+		padding-left: 20px;
+		padding-right: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.split_section_left_content
+	{
+		padding-left: 20px;
+		padding-top: 40px;
+		padding-right: 0;
+		padding-bottom: 0;
+	}
+	.loaders_container
+	{
+		margin-left: 0px;
+	}
 }
 
 /************
@@ -501,7 +538,20 @@
 
 @media only screen and (max-width: 480px)
 {
-	
+	.milestones_container
+	{
+	    font-size: 36px;
+        padding-left: 20px;
+        padding-right: 0px;
+	}
+	.milestone_counter
+	{
+		font-size: 36px;
+		padding-top: 10px;
+		display: flex;
+        justify-content: space-around;
+        align-items: center;
+	}
 }
 
 /************
