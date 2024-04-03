@@ -1025,6 +1025,9 @@ input[type=number]::-webkit-outer-spin-button
 	color: #6d6d6d;
 	line-height: 2;
 }
+.footer_logo img {
+    width: 60%;
+}
 .newsletter_container
 {
 	margin-top: 8px;

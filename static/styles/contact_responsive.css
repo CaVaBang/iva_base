@@ -157,12 +157,12 @@
 	.booking_input_container > div:first-child,
 	.booking_input_container > div:nth-child(2)
 	{
-		width: 50%;
+		width: 100%;
 	}
 	.booking_input_container > div:nth-child(3),
 	.booking_input_container > div:nth-child(4)
 	{
-		width: 50%;
+		width: 100%;
 	}
 	.booking_input_container > div:not(:last-of-type)
 	{
@@ -186,6 +186,9 @@
 	{
 		margin-right: 15px;
 	}
+	.footer_logo img {
+        width: 40%;
+    }
 }
 
 /************
@@ -324,6 +327,13 @@
 	.contact_map
 	{
 		height: 550px;
+	}
+	.booking_button
+	{
+		width: 100%;
+		height: 40px;
+		margin: 15px auto;
+		display: block;
 	}
 }
 
