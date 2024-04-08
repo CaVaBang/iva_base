@@ -223,7 +223,7 @@ $(document).ready(function()
 			gallerySlider.owlCarousel(
 			{
 				items:4,
-				loop:false,
+				loop:true,
 				autoplay:false,
 				dots:false,
 				nav:true,
