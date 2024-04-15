@@ -84,7 +84,7 @@
 							<div class="row">
 								<div class="col">
 									<div class="home_content text-center">
-										<div class="home_title">База отдыха "Ивушка"</div>
+										<div class="home_title">База отдыха «Ивушка»</div>
 										<div class="booking_form_container">
 											<form action="#" class="booking_form">
 												<div class="d-flex flex-xl-row flex-column align-items-start justify-content-start">
@@ -92,7 +92,7 @@
 														<div><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Заселение" required="required"></div>
 														<div><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Выселение" required="required"></div>
 														<div><input type="number" class="booking_input booking_input_b" placeholder="Количество гостей" required="required"></div>
-														<div><button class="booking_button trans_200">Забронировать</button></div>
+														<div><button id="openModalButton" class="booking_button trans_200">Забронировать</button></div>
 													</div>
 												</div>
 											</form>
@@ -106,6 +106,26 @@
 			</div>
 		</div>
 	</div>
+
+
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<form class="modal-form" id="modalForm">
+				<span class="close">&times;</span>
+				<input name="name" placeholder="Укажите ваше имя:" class="name" required />
+				<input name="emailaddress" placeholder="Укажите ваш Email:" class="email" type="email" required />
+				<textarea rows="4" cols="50" name="subject" placeholder="Введите ваше сообщение:" class="message" required></textarea>
+				<input name="submit" class="btn" type="submit" value="Отправить" />
+			</form>
+		</div>
+	</div>
+
+	<div id="errorMessages" class="error-messages">
+    	<div id="errorBookingIn" class="error-message"></div>
+    	<div id="errorBookingOut" class="error-message"></div>
+    	<div id="errorBookingGuests" class="error-message"></div>
+	</div>
+
 
 	<!-- Features -->
 
