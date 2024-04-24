@@ -743,8 +743,22 @@ form {
     max-width: 100%;
     width: 100%;
     border: solid 2px #ffffff;
-    border-radius: 5px;
-    background: rgba(60, 63, 65, 0.9);
+    border-radius: 0;
+    background: rgba(60, 63, 65, 0.5);
+    background-clip: padding-box;
+    box-shadow: 0 0 13px 3px rgba(0, 0, 0, 0.5);
+}
+
+#modalForm {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0px 30px 8px 30px;
+    min-width: 320px;
+    max-width: 100%;
+    width: 100%;
+    border: solid 2px #ffffff;
+    border-radius: 0;
+    background: rgba(40, 43, 45, 0.8);
     background-clip: padding-box;
     box-shadow: 0 0 13px 3px rgba(0, 0, 0, 0.5);
 }
@@ -755,19 +769,25 @@ input {
     margin-bottom: 20px;
     padding-right: 20px;
     padding-left: 20px;
-    border-radius: 4px;
+    border-radius: 0;
+    width: 100%;
+    height: 54px;
     background-clip: padding-box;
     color: #fff;
-    font-weight: 300;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 14px;
+    border: solid 2px #ffffff;
 }
 
 textarea {
     overflow: hidden;
+    padding-top: 12px;
     width: 100%;
     height: 110px;
     border: 1px solid rgba(255, 255, 255, 0.6);
-    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border: solid 2px #ffffff;
 
 }
 
@@ -777,9 +797,23 @@ input[type="submit"] {
 
 input.name,
 input.email,
+input.phone,
 input.message {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     padding-left: 25px;
+    border-radius: 0;
+}
+
+.modal-form p {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    line-height: 2;
+    font-weight: 600;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 ::-webkit-input-placeholder {
@@ -802,6 +836,7 @@ input:focus,
 textarea:focus {
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
+    border-radius: 0;
 }
 
 :focus::-webkit-input-placeholder {
@@ -817,16 +852,24 @@ textarea:focus {
 }
 
 .btn {
-    border: 1px solid #253737;
-    background: #416b68;
-    color: #e1e1e1;
+    border: 0;
+    width: 100%;
+    height: 54px;
+    background: #1ab09f;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    border: none;
     outline: none;
+    cursor: pointer;
+    border-radius: 0;
 }
 
 .btn:hover {
-    border: 1px solid #253737;
-    background: #416b68;
+    border: 0;
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
+    border-radius: 0;
 }
 
 .btn:active {
@@ -834,6 +877,7 @@ textarea:focus {
     border: 1px solid #333333;
     background: #ffcc00;
     color: #fff;
+    border-radius: 0;
 }
 .error-messages {
     display: none;
@@ -1397,6 +1441,8 @@ textarea:focus {
 
 .modal {
     display: none;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -1410,22 +1456,24 @@ textarea:focus {
 
 .modal-content {
     background-color: #fff;
-    border-radius: 10px;
-    margin: 5% auto;
+    border-radius: 0;
+    margin: 8% auto;
     padding: 0px;
-    width: 80%;
+    width: 1000px;
 }
 
 .close {
-    color: #aaa;
+    color: #fff;
     float: right;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .close:hover,
 .close:focus {
-    color: #000;
+    color: #fff;
     text-decoration: none;
     cursor: pointer;
 }
