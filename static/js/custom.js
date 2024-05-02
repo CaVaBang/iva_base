@@ -115,7 +115,7 @@ $(document).ready(function()
 			{
 				items:1,
 				autoplay:false,
-				loop:true,
+				loop:false,
 				nav:false,
 				smartSpeed:1200,
 				mouseDrag:false
@@ -141,7 +141,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	5. Init Date Picker
 
@@ -222,9 +222,9 @@ $(document).ready(function()
 			var gallerySlider = $('.gallery_slider');
 			gallerySlider.owlCarousel(
 			{
-				items:4,
+				items:10,
 				loop:true,
-				autoplay:false,
+				autoplay:true,
 				dots:false,
 				nav:true,
 				smartSpeed:1200,

@@ -283,6 +283,31 @@ section
 	height: 100%;
 }
 
+.owl-nav {
+    font-size: 40px;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+    background-color: transparent;
+    color: #000000;
+    padding: 20px;
+}
+.owl-theme .owl-nav [class*='owl-']:hover {
+    background: transparent;
+    color: #000000;
+    text-decoration: none;
+}
+.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next, .owl-carousel button.owl-dot {
+    background: none;
+    color: inherit;
+    border: transparent;
+    padding: 0 !important;
+    font: inherit;
+}
+.owl-carousel button:focus {
+    outline: none;
+}
 /*********************************
 3. Header
 *********************************/
@@ -735,7 +760,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Стили из второго кода */
 
-form {
+.booking_form {
     overflow: hidden;
     margin: 0 auto;
     padding: 30px 30px 6px 30px;
@@ -899,7 +924,7 @@ textarea:focus {
 .features
 {
 	background: #ffffff;
-	padding-top: 115px;
+	padding-top: 100px;
 	padding-bottom: 24px;
 }
 .icon_box_col
@@ -977,8 +1002,8 @@ textarea:focus {
 .about
 {
 	background: #ffffff;
-	padding-top: 107px;
-	padding-bottom: 104px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 .about_text
 {
@@ -1108,8 +1133,8 @@ textarea:focus {
 .booking
 {
 	background: #ffffff;
-	padding-top: 107px;
-	padding-bottom: 114px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 .booking_text
 {
