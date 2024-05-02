@@ -1446,10 +1446,9 @@ textarea:focus {
   padding-bottom: 20px;
 }
 
-.map-container iframe {
-  width: 100% !important;
-  height: 600px;
-  border: 0;
+.map-container #map {
+  width: 100%;
+  height: 500px;
 }
 
 .map-container a {
@@ -1463,6 +1462,7 @@ textarea:focus {
 .map-container a:nth-child(2) {
   top: 30px;
 }
+
 
 .modal {
     display: none;

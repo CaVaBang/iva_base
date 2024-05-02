@@ -436,13 +436,43 @@
 		</div>
 	</div>
 
+
 	<div class="map-container">
-		<div style="position:relative;overflow:hidden;">
-			<a href="https://yandex.ru/maps/org/lazurnaya/54243748817/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Лазурная</a>
-			<a href="https://yandex.ru/maps/10946/astrakhan-oblast/category/tourist_camp/184106426/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Турбаза в Астраханской области</a>
-			<iframe src="https://yandex.ru/map-widget/v1/?display-text=%D0%B1%D0%B0%D0%B7%D0%B0%20%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0%20%D0%B2%20%D0%B0%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D0%B8&filter=alternate_vertical%3AWhatWhere&ll=48.270169%2C46.315823&mode=search&oid=54243748817&ol=biz&sctx=ZAAAAAgCEAAaKAoSCdwpHaz%2FF0hAEQYTfxR1LEdAEhIJBcHj27sG0T8R97GC34YYuz8iBgABAgMEBSgKOABAnYcGSAFqAnJ1nQHNzEw9oAEAqAEAvQGN13czwgFw7bjm5wPUl%2B2m0AHR17eJygHOic7mA6Sv5qjR6o7aiwHP%2Fu%2FnmAG228WirgSx1uHnxgSjm%2BKx6QKB4p7d6QG80ZbCjwKhtKL8A9KdrPcDibyxy4sDxOXI%2FAPqmJbFuAGVxI2QxASDs5PW9AXiguXCBoICK9Cx0LDQt9CwINC%2B0YLQtNGL0YXQsCDQsiDQsNGB0YLRgNCw0YXQsNC90LiKAhMxODQxMDY0MjYkMTg0MTA2NDAwkgICMzeaAgxkZXNrdG9wLW1hcHM%3D&sll=48.243274%2C46.315823&sspn=0.201618%2C0.080260&text=%D0%B1%D0%B0%D0%B7%D0%B0%20%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0%20%D0%B2%20%D0%B0%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D0%B8&z=13.29" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
-		</div>
+		<div id="map"></div>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=59c694c4-ff96-421b-9e1f-bd2731e3df3e&lang=ru_RU" type="text/javascript"></script>
+		<script>
+        function initYandexMap() {
+            ymaps.ready(function () {
+                var myMap = new ymaps.Map('map', {
+                    center: [46.338472, 48.232619], // Координаты центра карты
+                    zoom: 17 // Масштаб карты
+                });
+
+                // Проверяем, является ли устройство мобильным
+                var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+                // Если устройство мобильное, добавляем обработчик для отключения перетаскивания карты одним пальцем
+                if (isMobile) {
+                    myMap.behaviors.disable('drag');
+                    myMap.events.add('touchstart', function (e) {
+                        // Если на экране только один палец, отменяем событие перетаскивания карты
+                        if (e.get('touches').length === 1) {
+                            e.preventDefault();
+                        }
+                    });
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            initYandexMap();
+        });
+		</script>
 	</div>
+
+
+
+
 
 
 	<!-- Footer -->
