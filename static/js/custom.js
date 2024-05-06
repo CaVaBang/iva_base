@@ -347,48 +347,47 @@ $(document).ready(function()
 document.addEventListener('DOMContentLoaded', function () {
     var modal = document.getElementById("myModal");
     var openModalButton = document.getElementById("openModalButton");
-    var span = document.getElementsByClassName("close")[0];
     var bookingIn = document.querySelector(".booking_in");
     var bookingOut = document.querySelector(".booking_out");
     var bookingGuests = document.querySelector(".booking_input_b");
     var errorMessages = document.getElementById("errorMessages");
-    var errorBookingIn = document.getElementById("errorBookingIn");
-    var errorBookingOut = document.getElementById("errorBookingOut");
-    var errorBookingGuests = document.getElementById("errorBookingGuests");
 
     openModalButton.onclick = function() {
-        // Проверяем, заполнены ли все поля
         var isError = false;
-        if (bookingIn.value.trim() === "") {
-            errorBookingIn.textContent = "Пожалуйста, заполните это поле.";
-            errorBookingIn.style.display = "block";
+        var errorMessage = "";
+
+        // Проверяем, заполнены ли все поля
+        if (bookingIn.value.trim() === "" || bookingOut.value.trim() === "" || bookingGuests.value.trim() === "") {
+            errorMessage = "Пожалуйста, заполните все поля.";
             isError = true;
-        } else {
-            errorBookingIn.style.display = "none";
         }
 
-        if (bookingOut.value.trim() === "") {
-            errorBookingOut.textContent = "Пожалуйста, заполните это поле.";
-            errorBookingOut.style.display = "block";
-            isError = true;
-        } else {
-            errorBookingOut.style.display = "none";
+        // Если есть ошибка, отображаем сообщение об ошибке
+        if (isError) {
+            errorMessages.textContent = errorMessage;
+            errorMessages.style.display = "block";
+            return;
         }
 
-        if (bookingGuests.value.trim() === "") {
-            errorBookingGuests.textContent = "Пожалуйста, заполните это поле.";
-            errorBookingGuests.style.display = "block";
-            isError = true;
-        } else {
-            errorBookingGuests.style.display = "none";
-        }
-
-        if (!isError) {
-            // Если все поля заполнены, открываем модальное окно
-            modal.style.display = "block";
-        }
+        // Если ошибок нет, открываем модальное окно
+        modal.style.display = "block";
     }
 
+    // Скрытие сообщения об ошибке при фокусе на поле ввода
+    bookingIn.addEventListener('focus', function() {
+        errorMessages.style.display = "none";
+    });
+
+    bookingOut.addEventListener('focus', function() {
+        errorMessages.style.display = "none";
+    });
+
+    bookingGuests.addEventListener('focus', function() {
+        errorMessages.style.display = "none";
+    });
+
+    // Закрытие модального окна при клике на крестик или вне окна
+    var span = document.getElementsByClassName("close")[0];
     span.onclick = function() {
         modal.style.display = "none";
     }
@@ -399,3 +398,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+
+

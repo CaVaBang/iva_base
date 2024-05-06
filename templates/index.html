@@ -89,6 +89,7 @@
 											<div action="#" class="booking_form">
 												<div class="d-flex flex-xl-row flex-column align-items-start justify-content-start">
 													<div class="booking_input_container d-flex flex-lg-row flex-column align-items-start justify-content-start">
+														<div class="error_message" id="errorMessages"></div>
 														<div><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Заселение" required="required"></div>
 														<div><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Выселение" required="required"></div>
 														<div><input type="number" class="booking_input booking_input_b" placeholder="Количество гостей" required="required"></div>
@@ -120,12 +121,6 @@
 				<input name="submit" class="btn" type="submit" value="Отправить" />
 			</form>
 		</div>
-	</div>
-
-	<div id="errorMessages" class="error-messages">
-    	<div id="errorBookingIn" class="error-message"></div>
-    	<div id="errorBookingOut" class="error-message"></div>
-    	<div id="errorBookingGuests" class="error-message"></div>
 	</div>
 
 

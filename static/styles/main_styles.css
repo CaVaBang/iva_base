@@ -904,15 +904,15 @@ textarea:focus {
     color: #fff;
     border-radius: 0;
 }
-.error-messages {
-    display: none;
-    margin-top: 10px;
-}
 
-.error-message {
+
+.error_message {
+    position: absolute;
+    top: -25px; /* Позиционируем текст выше кнопок бронирования */
+    left: 50%; /* Располагаем текст по центру */
+    transform: translateX(-50%); /* Центрируем текст относительно родительского элемента */
+    font-size: 14px;
     color: red;
-    margin-top: 5px;
-    display: none;
 }
 
 
@@ -1482,7 +1482,7 @@ textarea:focus {
 .modal-content {
     background-color: #fff;
     border-radius: 0;
-    margin: 8% auto;
+    margin: 5% auto;
     padding: 0px;
     width: 1000px;
 }

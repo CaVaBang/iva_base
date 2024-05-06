@@ -144,10 +144,6 @@
 	{
 		font-size: 72px;
 	}
-	.booking_input_container > div
-	{
-		padding-right: 0;
-	}
 	.booking_input_container > div:first-child,
 	.booking_input_container > div:nth-child(2)
 	{
