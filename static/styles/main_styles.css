@@ -752,6 +752,7 @@ input[type=number]::-webkit-outer-spin-button {
     border: none;
     outline: none;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .booking_button:hover {

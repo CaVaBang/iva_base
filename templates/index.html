@@ -89,11 +89,11 @@
 											<div action="#" class="booking_form">
 												<div class="d-flex flex-xl-row flex-column align-items-start justify-content-start">
 													<div class="booking_input_container d-flex flex-lg-row flex-column align-items-start justify-content-start">
-														<div class="error_message" id="errorMessages"></div>
 														<div><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Заселение" required="required"></div>
 														<div><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Выселение" required="required"></div>
 														<div><input type="number" class="booking_input booking_input_b" placeholder="Количество гостей" required="required"></div>
 														<div><button id="openModalButton" class="booking_button trans_200">Забронировать</button></div>
+														<div class="error_message" id="errorMessages"></div>
 													</div>
 												</div>
 											</div>
@@ -436,38 +436,47 @@
 		<div id="map"></div>
 		<script src="https://api-maps.yandex.ru/2.1/?apikey=59c694c4-ff96-421b-9e1f-bd2731e3df3e&lang=ru_RU" type="text/javascript"></script>
 		<script>
-        function initYandexMap() {
-            ymaps.ready(function () {
-                var myMap = new ymaps.Map('map', {
-                    center: [46.338472, 48.232619], // Координаты центра карты
-                    zoom: 17 // Масштаб карты
-                });
+		function initYandexMap() {
+			ymaps.ready(function () {
+				var myMap = new ymaps.Map('map', {
+					center: [46.338472, 48.232619], // Координаты центра карты
+					zoom: 17 // Масштаб карты
+				});
 
-                // Проверяем, является ли устройство мобильным
-                var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+				// Проверяем, является ли устройство мобильным
+				var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-                // Если устройство мобильное, добавляем обработчик для отключения перетаскивания карты одним пальцем
-                if (isMobile) {
-                    myMap.behaviors.disable('drag');
-                    myMap.events.add('touchstart', function (e) {
-                        // Если на экране только один палец, отменяем событие перетаскивания карты
-                        if (e.get('touches').length === 1) {
-                            e.preventDefault();
-                        }
-                    });
-                }
-            });
-        }
+				// Если устройство мобильное, добавляем обработчик для отключения перетаскивания карты одним пальцем
+				if (isMobile) {
+					myMap.behaviors.disable('drag');
+					myMap.events.add('touchstart', function (e) {
+						// Если на экране только один палец, отменяем событие перетаскивания карты
+						if (e.get('touches').length === 1) {
+							e.preventDefault();
+						}
+					});
+				}
 
-        document.addEventListener('DOMContentLoaded', function () {
-            initYandexMap();
-        });
+				// Находим все элементы карты на странице
+				var mapElements = document.querySelectorAll('.your-map-class'); // замените '.your-map-class' на класс вашей карты
+
+				// Добавляем обработчик события для каждой карты
+				mapElements.forEach(function(mapElement) {
+					// Отключаем скроллинг карты при наведении курсора
+					mapElement.addEventListener('wheel', function(event) {
+						event.stopPropagation(); // Остановка распространения события колеса мыши
+					});
+				});
+			});
+		}
+
+		document.addEventListener('DOMContentLoaded', function () {
+			initYandexMap();
+		});
+
+
 		</script>
 	</div>
-
-
-
-
 
 
 	<!-- Footer -->
