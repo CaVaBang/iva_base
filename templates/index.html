@@ -443,6 +443,8 @@
 					zoom: 17 // Масштаб карты
 				});
 
+				myMap.behaviors.disable('scrollZoom'); // Отключение масштабирования карты при прокрутке
+
 				// Проверяем, является ли устройство мобильным
 				var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -457,23 +459,26 @@
 					});
 				}
 
-				// Находим все элементы карты на странице
-				var mapElements = document.querySelectorAll('.your-map-class'); // замените '.your-map-class' на класс вашей карты
+				// Создаем метку на карте
+				var placeMark = new ymaps.Placemark(
+					[46.338472, 48.232619], // Координаты места
+					{
+						hintContent: 'База отдыха', // Всплывающая подсказка
+						balloonContent: 'Въезд' // Содержимое попапа
+					}
+				);
 
-				// Добавляем обработчик события для каждой карты
-				mapElements.forEach(function(mapElement) {
-					// Отключаем скроллинг карты при наведении курсора
-					mapElement.addEventListener('wheel', function(event) {
-						event.stopPropagation(); // Остановка распространения события колеса мыши
-					});
-				});
+				// Добавляем метку на карту
+				myMap.geoObjects.add(placeMark);
+
+				// Открываем попап по умолчанию при загрузке карты
+				placeMark.balloon.open();
 			});
 		}
 
 		document.addEventListener('DOMContentLoaded', function () {
 			initYandexMap();
 		});
-
 
 		</script>
 	</div>

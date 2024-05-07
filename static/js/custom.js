@@ -147,26 +147,26 @@ $(document).ready(function()
 
 	*/
 
-	function initDatePicker()
-	{
-		if($('.datepicker').length)
-		{
-			var datePickers = $('.datepicker');
-			datePickers.each(function()
-			{
-				var dp = $(this);
-				// Uncomment to use date as a placeholder
-				// var date = new Date();
-				// var dateM = date.getMonth() + 1;
-				// var dateD = date.getDate();
-				// var dateY = date.getFullYear();
-				// var dateFinal = dateM + '/' + dateD + '/' + dateY;
-				var placeholder = dp.data('placeholder');
-				dp.val(placeholder);
-				dp.datepicker();
-			});
-		}	
-	}
+    function initDatePicker() {
+        if ($('.datepicker').length) {
+            var datePickers = $('.datepicker');
+            datePickers.each(function (index) {
+                var dp = $(this);
+                var placeholder = dp.data('placeholder');
+                dp.val(placeholder);
+                dp.datepicker({
+                    minDate: 0, // Устанавливаем минимальную доступную дату как сегодняшний день
+                    onSelect: function (selectedDate) {
+                        // Если это первый календарь
+                        if (index === 0) {
+                            // Находим второй календарь по индексу и устанавливаем его минимальную дату как выбранную дату в первом календаре
+                            datePickers.eq(1).datepicker('option', 'minDate', selectedDate);
+                        }
+                    }
+                });
+            });
+        }
+    }
 
 	/* 
 
@@ -400,4 +400,16 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// Находим все элементы input с классом "booking_input_b"
+var inputElements = document.querySelectorAll('.booking_input_b');
+
+// Для каждого элемента применяем ограничения
+inputElements.forEach(function(inputElement) {
+    inputElement.addEventListener('input', function() {
+        // Если введенное значение больше 100, устанавливаем его в 100
+        if (parseInt(this.value) > 100) {
+            this.value = 100;
+        }
+    });
+});
 
