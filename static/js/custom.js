@@ -147,26 +147,48 @@ $(document).ready(function()
 
 	*/
 
-    function initDatePicker() {
-        if ($('.datepicker').length) {
-            var datePickers = $('.datepicker');
-            datePickers.each(function (index) {
-                var dp = $(this);
-                var placeholder = dp.data('placeholder');
-                dp.val(placeholder);
-                dp.datepicker({
-                    minDate: 0, // Устанавливаем минимальную доступную дату как сегодняшний день
-                    onSelect: function (selectedDate) {
-                        // Если это первый календарь
-                        if (index === 0) {
-                            // Находим второй календарь по индексу и устанавливаем его минимальную дату как выбранную дату в первом календаре
-                            datePickers.eq(1).datepicker('option', 'minDate', selectedDate);
-                        }
+function initDatePicker() {
+    if ($('.datepicker').length) {
+        var datePickers = $('.datepicker');
+        datePickers.each(function (index) {
+            var dp = $(this);
+            var placeholder = dp.data('placeholder');
+            dp.val(placeholder);
+            dp.datepicker({
+                minDate: 0, // Устанавливаем минимальную доступную дату как сегодняшний день
+                dateFormat: 'dd/mm/yy', // Устанавливаем формат даты
+                onSelect: function (selectedDate) {
+                    // Проверка на соответствие формату даты
+                    var isValidDate = /^\d{2}\/\d{2}\/\d{4}$/.test(selectedDate);
+                    if (!isValidDate) {
+                        var errorMessage = "Ошибка: Дата должна быть в формате dd/mm/yy";
+                        var errorMessages = document.getElementById("errorMessages");
+                        errorMessages.textContent = errorMessage;
+                        errorMessages.style.display = "block";
+                        return;
                     }
-                });
+                    // Если ошибок нет, скрываем сообщение об ошибке
+                    var errorMessages = document.getElementById("errorMessages");
+                    errorMessages.style.display = "none";
+
+                    // Если это первый календарь
+                    if (index === 0) {
+                        // Находим второй календарь по индексу и устанавливаем его минимальную дату как выбранную дату в первом календаре
+                        datePickers.eq(1).datepicker('option', 'minDate', selectedDate);
+                    }
+                }
             });
-        }
+
+            // Удаляем обработчик события для ввода цифр
+            dp.off('input');
+            // Запрещаем ручной ввод текста в поле
+            dp.on('keydown', function(e) {
+                e.preventDefault();
+            });
+        });
     }
+}
+
 
 	/* 
 

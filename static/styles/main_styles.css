@@ -308,6 +308,8 @@ section
 .owl-carousel button:focus {
     outline: none;
 }
+
+
 /*********************************
 3. Header
 *********************************/
@@ -630,7 +632,7 @@ section
 }
 .home_slider .background_image
 {
-	opacity: 0.28;
+	opacity: 0.40;
 }
 .home_container
 {
@@ -645,6 +647,7 @@ section
 	font-weight: 600;
 	color: #ffffff;
 	line-height: 1.2;
+	margin-top: 0; /* Прижимаем к верхнему краю */
 }
 .booking_form_container {
     width: 100%;
