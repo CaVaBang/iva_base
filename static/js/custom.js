@@ -422,15 +422,25 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Находим все элементы input с классом "booking_input_b"
-var inputElements = document.querySelectorAll('.booking_input_b');
 
-// Для каждого элемента применяем ограничения
-inputElements.forEach(function(inputElement) {
-    inputElement.addEventListener('input', function() {
-        // Если введенное значение больше 100, устанавливаем его в 100
-        if (parseInt(this.value) > 100) {
-            this.value = 100;
+
+
+// Функция для проверки стиля элемента и блокировки/разблокировки прокрутки
+function checkModalDisplay(mutationsList, observer) {
+    mutationsList.forEach(mutation => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+            var modal = document.getElementById('myModal');
+            if (modal.style.display === 'block') {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
         }
     });
-});
+}
+
+var observer = new MutationObserver(checkModalDisplay);
+
+var config = { attributes: true, childList: true, subtree: true };
+
+observer.observe(document.getElementById('myModal'), config);

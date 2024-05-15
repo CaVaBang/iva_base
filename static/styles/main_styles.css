@@ -822,6 +822,9 @@ textarea {
 
 input[type="submit"] {
     cursor: pointer;
+    background-color: #1ab09f;
+    box-shadow: none;
+    border-radius: initial;
 }
 
 input.name,
@@ -903,20 +906,30 @@ textarea:focus {
 
 .btn:active {
     margin-top: 1px;
-    border: 1px solid #333333;
-    background: #ffcc00;
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
     border-radius: 0;
 }
-
+##############
+.btn.focus, .btn:focus {
+    box-shadow: none;
+}
+input:focus, textarea:focus {
+    background-color: #1ab09f;
+    box-shadow: none;
+    border-radius: initial;
+}
+############
 
 .error_message {
     position: absolute;
-    top: -25px; /* Позиционируем текст выше кнопок бронирования */
-    left: 50%; /* Располагаем текст по центру */
-    transform: translateX(-50%); /* Центрируем текст относительно родительского элемента */
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 14px;
     color: red;
+    white-space: nowrap; /* Предотвращает перенос текста на следующую строку */
+
 }
 
 
@@ -1482,13 +1495,12 @@ textarea:focus {
     background-color: rgba(0,0,0,0.4);
     padding-top: 60px;
 }
-
 .modal-content {
     background-color: #fff;
     border-radius: 0;
     margin: 5% auto;
     padding: 0px;
-    width: 1000px;
+    width: 80%;
 }
 
 .close {
