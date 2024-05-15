@@ -434,4 +434,3 @@ inputElements.forEach(function(inputElement) {
         }
     });
 });
-
