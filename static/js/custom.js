@@ -369,10 +369,17 @@ function initDatePicker() {
 document.addEventListener('DOMContentLoaded', function () {
     var modal = document.getElementById("myModal");
     var openModalButton = document.getElementById("openModalButton");
+    var btnModal = document.getElementById("btnModal");
     var bookingIn = document.querySelector(".booking_in");
     var bookingOut = document.querySelector(".booking_out");
     var bookingGuests = document.querySelector(".booking_input_b");
+    var nameInput = document.querySelector(".name")
+    var phoneInput = document.querySelector(".phone");
+    var emailInput = document.querySelector(".email");
+    var messageInput = document.querySelector(".message");
     var errorMessages = document.getElementById("errorMessages");
+    var errorModal = document.getElementById("errorModal");
+
 
     openModalButton.onclick = function() {
         var isError = false;
@@ -395,6 +402,35 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = "block";
     }
 
+    btnModal.onclick = function(event) {
+        event.preventDefault(); // Предотвращаем отправку формы по умолчанию
+
+        var isErrorModal = false;
+        var errorModalWindow = "";
+
+        if (nameInput.value.trim() === "") {
+            errorModalWindow = "Пожалуйста, введите ваше имя.";
+            isErrorModal = true;
+        } else if (phoneInput.value.trim() === "") {
+            errorModalWindow = "Пожалуйста, введите номер телефона.";
+            isErrorModal = true;
+        } else if (emailInput.value.trim() === "") {
+            errorModalWindow = "Пожалуйста, введите адрес электронной почты.";
+            isErrorModal = true;
+        }
+
+        if (isErrorModal) {
+            errorModal.textContent = errorModalWindow;
+            errorModal.style.display = "block";
+            return;
+        } else {
+            // Если ошибок нет, можно отправить форму
+            document.querySelector("#modalForm").submit();
+        }
+    }
+
+
+
     // Скрытие сообщения об ошибке при фокусе на поле ввода
     bookingIn.addEventListener('focus', function() {
         errorMessages.style.display = "none";
@@ -406,6 +442,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     bookingGuests.addEventListener('focus', function() {
         errorMessages.style.display = "none";
+    });
+
+    phoneInput.addEventListener('focus', function() {
+        errorModal.style.display = "none";
+    });
+
+    nameInput.addEventListener('focus', function() {
+        errorModal.style.display = "none";
+    });
+
+    emailInput.addEventListener('focus', function() {
+        errorModal.style.display = "none";
     });
 
     // Закрытие модального окна при клике на крестик или вне окна

@@ -905,22 +905,19 @@ textarea:focus {
 }
 
 .btn:active {
-    margin-top: 1px;
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
     border-radius: 0;
 }
-##############
-.btn.focus, .btn:focus {
+
+.btn.focus,
+.btn:focus {
     box-shadow: none;
 }
 input:focus, textarea:focus {
-    background-color: #1ab09f;
+    background-color: none;
     box-shadow: none;
-    border-radius: initial;
 }
-############
-
 .error_message {
     position: absolute;
     top: -25px;

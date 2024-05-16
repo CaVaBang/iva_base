@@ -111,15 +111,16 @@
 
 	<div id="myModal" class="modal">
 		<div class="modal-content">
-			<div class="modal-form" id="modalForm">
+			<form action="#" class="modal-form" id="modalForm" novalidate>
 				<span class="close">&times;</span>
 				<p style="margin-bottom: 10px;">Оставьте свои контактные данные, для подтверждения бронирования</p>
-				<input name="name" placeholder="Ваше имя:" class="name" required />
-				<input name="phone" placeholder="Номер телефона:" class="phone" type="tel" required />
-				<input name="emailaddress" placeholder="Email:" class="email" type="email" required />
-				<textarea rows="4" cols="50" name="subject" placeholder="Дополнительные пожелания:" class="message" required></textarea>
-				<input name="submit" class="booking_button trans_200" type="submit" value="Отправить" />
-			</div>
+				<div><input type="text" class="name" placeholder="Ваше имя:" required="required"/> </div>
+				<div><input type="tel" class="phone" placeholder="Номер телефона:" required="required"/> </div>
+				<div><input type="email" class="email" placeholder="Email:" required="required"/> </div>
+				<textarea rows="4" cols="50" class="message" placeholder="Дополнительные пожелания:" required></textarea>
+				<div><button id="btnModal" class="btn">Отправить </button> </div>
+				<div class="error_message" id="errorModal"></div>
+			</form>
 		</div>
 	</div>
 
