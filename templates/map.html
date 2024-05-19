@@ -4,7 +4,7 @@
 <title>Blog</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="База отдыха 'Ивушка'">
+<meta name="description" content="«Ивушка» - Как добраться?">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap-4.1.2/bootstrap.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}">
@@ -79,16 +79,17 @@
 						<div class="home_content text-center">
 							<div class="home_title">Как добраться?</div>
 							<div class="booking_form_container">
-								<form action="#" class="booking_form" id="booking_form">
+								<div action="#" class="booking_form" id="booking_form">
 									<div class="d-flex flex-xl-row flex-column align-items-start justify-content-start">
 										<div class="booking_input_container d-flex flex-lg-row flex-column align-items-start justify-content-start">
 											<div><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Заселение" required="required"></div>
 											<div><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Выселение" required="required"></div>
 											<div><input type="number" class="booking_input booking_input_b" placeholder="Количество гостей" required="required"></div>
-											<div><button class="booking_button trans_200">Забронировать</button></div>
+											<div><button id="openModalButton" class="booking_button trans_200">Забронировать</button></div>
+											<div class="error_message" id="errorMessages"></div>
 										</div>
 									</div>
-								</form>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -97,23 +98,84 @@
 		</div>
 	</div>
 
+
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<form action="#" class="modal-form" id="modalForm" novalidate>
+				<span class="close">&times;</span>
+				<p style="margin-bottom: 10px;">Оставьте свои контактные данные, для подтверждения бронирования</p>
+				<div><input type="text" class="name" placeholder="Ваше имя:" required="required"/> </div>
+				<div><input type="tel" class="phone" placeholder="Номер телефона:" required="required"/> </div>
+				<div><input type="email" class="email" placeholder="Email:" required="required"/> </div>
+				<textarea rows="4" cols="50" class="message" placeholder="Дополнительные пожелания:" required></textarea>
+				<div><button id="btnModal" class="btn">Отправить </button> </div>
+				<div class="error_message" id="errorModal"></div>
+			</form>
+		</div>
+	</div>
+
 	<!-- Map -->
 
-	<div class="about">
+	<div class="map_about">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-    					<div class="about_title"><h2>Астраханская область, Приволжский район, с. Началово, ул. Мостовая</h2></div>
+    					<div class="map_about_title"><h2>Астраханская область, Приволжский район, с. Началово, ул. Мостовая</h2></div>
 				</div>
 			</div>
 		</div>
 	</div>
 
+
 	<div class="map-container">
-		<div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/lazurnaya/54243748817/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Лазурная</a>
-			<a href="https://yandex.ru/maps/10946/astrakhan-oblast/category/tourist_camp/184106426/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Турбаза в Астраханской области</a>
-			<iframe src="https://yandex.ru/map-widget/v1/?display-text=%D0%B1%D0%B0%D0%B7%D0%B0%20%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0%20%D0%B2%20%D0%B0%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D0%B8&filter=alternate_vertical%3AWhatWhere&ll=48.270169%2C46.315823&mode=search&oid=54243748817&ol=biz&sctx=ZAAAAAgCEAAaKAoSCdwpHaz%2FF0hAEQYTfxR1LEdAEhIJBcHj27sG0T8R97GC34YYuz8iBgABAgMEBSgKOABAnYcGSAFqAnJ1nQHNzEw9oAEAqAEAvQGN13czwgFw7bjm5wPUl%2B2m0AHR17eJygHOic7mA6Sv5qjR6o7aiwHP%2Fu%2FnmAG228WirgSx1uHnxgSjm%2BKx6QKB4p7d6QG80ZbCjwKhtKL8A9KdrPcDibyxy4sDxOXI%2FAPqmJbFuAGVxI2QxASDs5PW9AXiguXCBoICK9Cx0LDQt9CwINC%2B0YLQtNGL0YXQsCDQsiDQsNGB0YLRgNCw0YXQsNC90LiKAhMxODQxMDY0MjYkMTg0MTA2NDAwkgICMzeaAgxkZXNrdG9wLW1hcHM%3D&sll=48.243274%2C46.315823&sspn=0.201618%2C0.080260&text=%D0%B1%D0%B0%D0%B7%D0%B0%20%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0%20%D0%B2%20%D0%B0%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D0%B8&z=13.29" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
-		</div>
+		<div id="map"></div>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=59c694c4-ff96-421b-9e1f-bd2731e3df3e&lang=ru_RU" type="text/javascript"></script>
+		<script>
+		function initYandexMap() {
+			ymaps.ready(function () {
+				var myMap = new ymaps.Map('map', {
+					center: [46.338472, 48.232619], // Координаты центра карты
+					zoom: 17 // Масштаб карты
+				});
+
+				myMap.behaviors.disable('scrollZoom'); // Отключение масштабирования карты при прокрутке
+
+				// Проверяем, является ли устройство мобильным
+				var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+				// Если устройство мобильное, добавляем обработчик для отключения перетаскивания карты одним пальцем
+				if (isMobile) {
+					myMap.behaviors.disable('drag');
+					myMap.events.add('touchstart', function (e) {
+						// Если на экране только один палец, отменяем событие перетаскивания карты
+						if (e.get('touches').length === 1) {
+							e.preventDefault();
+						}
+					});
+				}
+
+				// Создаем метку на карте
+				var placeMark = new ymaps.Placemark(
+					[46.338472, 48.232619], // Координаты места
+					{
+						hintContent: 'База отдыха', // Всплывающая подсказка
+						balloonContent: 'Въезд' // Содержимое попапа
+					}
+				);
+
+				// Добавляем метку на карту
+				myMap.geoObjects.add(placeMark);
+
+				// Открываем попап по умолчанию при загрузке карты
+				placeMark.balloon.open();
+			});
+		}
+
+		document.addEventListener('DOMContentLoaded', function () {
+			initYandexMap();
+		});
+
+		</script>
 	</div>
 
 

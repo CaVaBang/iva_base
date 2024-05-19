@@ -130,7 +130,9 @@
 
 @media only screen and (max-width: 1024px)
 {
-
+    .modal-content {
+        width: 70%;
+}
 }
 
 /************
@@ -192,14 +194,20 @@
 	{
 		margin-right: 15px;
 	}
-	.container
-    {
-        max-width: 540px !important;
 
-    }
     .home
     {
         height: 700px;
+    }
+
+    .details .container {
+        max-width: 100%;
+    }
+    .details_image{
+        min-height: 700px;
+    }
+    .details_content {
+    padding-left: 20px;
     }
 }
 
@@ -227,11 +235,7 @@
 
 @media only screen and (max-width: 768px)
 {
-	.container
-    {
-        max-width: 540px !important;
 
-    }
 }
 
 /************
@@ -274,6 +278,9 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
+	.details_image{
+        min-height: 400px;
+    }
 }
 
 /************
@@ -363,6 +370,9 @@
 	.modal-form p {
         font-size: 18px;
     }
+    .modal-content {
+        width: 90%;
+}
 }
 
 /************

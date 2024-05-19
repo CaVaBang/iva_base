@@ -132,6 +132,9 @@
         margin-left: auto;
         margin-right: auto;
     }
+    .modal-content {
+        width: 70%;
+}
 }
 
 /************
@@ -287,6 +290,9 @@
 	{
 		height: calc(100vw / 2);
 	}
+	.modal-content {
+        width: 90%;
+}
 }
 
 /************
@@ -410,7 +416,4 @@
 
 @media only screen and (max-width: 400px)
 {
-	.modal-content {
-        width: auto;
-}
 }

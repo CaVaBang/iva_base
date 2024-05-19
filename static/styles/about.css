@@ -1376,9 +1376,12 @@ button:focus {
 .modal-content {
     background-color: #fff;
     border-radius: 0;
-    margin: 5% auto;
-    padding: 0px;
-    width: 95%;
+    width: 60%; /* Ширина модалки */
+    max-width: 900px; /* Максимальная ширина для больших экранов */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .close {

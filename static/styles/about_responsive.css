@@ -241,6 +241,9 @@
         max-width: 100%;
         text-align: center;
     }
+    .modal-content {
+        width: 70%;
+}
 }
 
 /************
@@ -548,6 +551,9 @@
     .modal-form p {
         font-size: 18px;
     }
+    .modal-content {
+        width: 90%;
+}
 }
 
 /************

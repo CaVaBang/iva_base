@@ -1317,13 +1317,19 @@ button:focus {
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
     padding-top: 60px;
+    z-index: 1001; /* Для отображения модалки поверх owl carusel */
+
 }
 .modal-content {
     background-color: #fff;
     border-radius: 0;
-    margin: 5% auto;
-    padding: 0px;
-    width: 95%;
+    width: 60%; /* Ширина модалки */
+    max-width: 900px; /* Максимальная ширина для больших экранов */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001; /* Для отображения модалки поверх owl carusel */
 }
 
 .close {
