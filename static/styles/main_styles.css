@@ -277,7 +277,6 @@ section
 {
 	height: 100%;
 }
-
 .slide
 {
 	height: 100%;
@@ -308,6 +307,7 @@ section
 .owl-carousel button:focus {
     outline: none;
 }
+
 
 
 /*********************************
@@ -792,6 +792,12 @@ input[type=number]::-webkit-outer-spin-button {
     box-shadow: 0 0 13px 3px rgba(0, 0, 0, 0.5);
 }
 
+#myModal input:focus-visible,
+#myModal textarea:focus-visible,
+#myModal button:focus-visible {
+    outline: none;
+}
+
 textarea,
 input {
     display: block;
@@ -887,6 +893,7 @@ textarea:focus {
     border: 0;
     width: 100%;
     height: 54px;
+    margin-bottom: 20px;
     background: #1ab09f;
     font-size: 14px;
     font-weight: 500;
@@ -918,17 +925,25 @@ input:focus, textarea:focus {
     background-color: none;
     box-shadow: none;
 }
-.error_message {
+.home_container .error_message {
     position: absolute;
     top: -25px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
     color: red;
-    white-space: nowrap; /* Предотвращает перенос текста на следующую строку */
+    white-space: nowrap;
 
 }
-
+.modal-content .error_message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: red;
+    text-align: center;
+    white-space: nowrap;
+}
 
 
 /*********************************

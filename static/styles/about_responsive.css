@@ -39,6 +39,11 @@
 
 @media only screen and (max-width: 1440px)
 {
+    .about
+    {
+        padding-top: 107px;
+        padding-bottom: 140px;
+    }
 	.split_section_right_content
 	{
 		padding-right: 90px;
@@ -107,16 +112,20 @@
 
 @media only screen and (max-width: 1199px)
 {
+    .milestones_container {
+        padding-left: 15%; /* Начальное значение */
+        box-sizing: border-box; /* Учитываем padding в общей ширине элемента */
+    }
 	.container_custom .container
 	{
 		padding-left: 15px;
 		padding-right: 15px;
-		max-width: 960px;
+		max-width: 100%;
 	}
 	.container_custom .container .row
 	{
-		margin-left: -15px;
-		margin-right: -15px;
+		margin-left: -70px;
+		margin-right: -70px;
 	}
 	.container_custom .container .row > div[class^='col']
 	{
@@ -154,14 +163,12 @@
 	}
 	.split_section_right_content
 	{
-		padding-left: 40px;
 		padding-right: 0;
 		padding-top: 0;
 		padding-bottom: 0;
 	}
 	.split_section_left_content
 	{
-		padding-left: 40px;
 		padding-top: 50px;
 		padding-right: 0;
 		padding-bottom: 0;
@@ -205,6 +212,10 @@
 		margin-right: auto;
 		margin-top: 15px;
 	}
+	.booking_form
+	{
+	    padding: 15px 10px 10px 20px;
+	}
 }
 
 /************
@@ -235,6 +246,15 @@
 
 @media only screen and (max-width: 991px)
 {
+    .home
+    {
+        height: 700px;
+    }
+    .about
+    {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 	.main_nav
 	{
 		display: none;
@@ -290,12 +310,16 @@
 		margin-right: 15px;
 	}
 	.footer_logo img {
-        width: 60%;
+        width: 30%;
     }
     .container .about_images {
         width: 60%;
         margin-left: auto;
         margin-right: auto;
+    }
+    .milestones_container {
+        padding-left: 15%; /* Начальное значение */
+        box-sizing: border-box; /* Учитываем padding в общей ширине элемента */
     }
 }
 
@@ -332,9 +356,17 @@
 
 @media only screen and (max-width: 767px)
 {
+    .amenities_list li {
+        padding-left: 3px;
+    }
+    .about
+    {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
 	.container_custom .container
 	{
-		max-width: 540px;
+		max-width: 100%;
 	}
 	.header_content
 	{
@@ -377,8 +409,9 @@
 	.milestones_container
 	{
 	    font-size: 36px;
-        padding-left: 60px;
         padding-right: 0px;
+        padding-left: 15%; /* Начальное значение */
+        box-sizing: border-box; /* Учитываем padding в общей ширине элемента */
 	}
 	.milestone_counter
 	{
@@ -445,10 +478,6 @@
 		font-size: 18px;
 		line-height: 32px;
 	}
-	.home
-	{
-		height: 480px;
-	}
 	.home_title
 	{
 		font-size: 40px;
@@ -473,10 +502,6 @@
 		margin: 15px auto;
 		display: block;
 	}
-	.about_title h2
-	{
-		font-size: 36px;
-	}
 	.split_section_title h1
 	{
 		font-size: 36px;
@@ -484,7 +509,6 @@
 	.milestones_container
 	{
 	    font-size: 36px;
-        padding-left: 60px;
         padding-right: 0px;
 	}
 	.milestone_counter
@@ -504,6 +528,20 @@
 	{
 		height: 450px;
 	}
+	.loaders_container {
+        flex-wrap: nowrap; /* Отключаем перенос элементов */
+        justify-content: center; /* Выравниваем по центру */
+        margin: 55px; /* Отступы между лодерами */
+    }
+
+    .loader_container {
+        width: 100%; /* Полная ширина контейнера */
+        margin: 5px 0; /* Уменьшаем верхний и нижний отступ */
+    }
+    .loaders_container.flex-wrap {
+        -ms-flex-wrap: nowrap !important;
+        flex-wrap: nowrap !important;
+}
 }
 
 /************
@@ -512,16 +550,22 @@
 
 @media only screen and (max-width: 539px)
 {
+    .about_title h2 {
+        font-size: 26px;
+    }
+    .about
+    {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
 	.split_section_right_content
 	{
-		padding-left: 20px;
 		padding-right: 0;
 		padding-top: 0;
 		padding-bottom: 0;
 	}
 	.split_section_left_content
 	{
-		padding-left: 20px;
 		padding-top: 40px;
 		padding-right: 0;
 		padding-bottom: 0;
@@ -541,7 +585,6 @@
 	.milestones_container
 	{
 	    font-size: 36px;
-        padding-left: 20px;
         padding-right: 0px;
 	}
 	.milestone_counter
@@ -569,5 +612,8 @@
 
 @media only screen and (max-width: 400px)
 {
-	
+    .loaders_container.flex-wrap {
+        -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+}
 }

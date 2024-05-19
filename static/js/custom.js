@@ -106,40 +106,43 @@ $(document).ready(function()
 
 	*/
 
-	function initHomeSlider()
-	{
-		if($('.home_slider').length)
-		{
-			var homeSlider = $('.home_slider');
-			homeSlider.owlCarousel(
-			{
-				items:1,
-				autoplay:false,
-				loop:false,
-				nav:false,
-				smartSpeed:1200,
-				mouseDrag:false
-			});
+    function initHomeSlider()
+    {
+        if($('.home_slider').length)
+        {
+            var homeSlider = $('.home_slider');
+            homeSlider.owlCarousel(
+            {
+                items:1,
+                autoplay:false,
+                loop:false,
+                nav:false,
+                smartSpeed:1200,
+                mouseDrag:false,
+                touchDrag: false,
+                pullDrag: false
+            });
 
-			/* Custom dots events */
-			if($('.home_slider_custom_dot').length)
-			{
-				$('.home_slider_custom_dot').on('click', function()
-				{
-					$('.home_slider_custom_dot').removeClass('active');
-					$(this).addClass('active');
-					homeSlider.trigger('to.owl.carousel', [$(this).index(), 1200]);
-				});
-			}
+            /* Custom dots events */
+            if($('.home_slider_custom_dot').length)
+            {
+                $('.home_slider_custom_dot').on('click', function()
+                {
+                    $('.home_slider_custom_dot').removeClass('active');
+                    $(this).addClass('active');
+                    homeSlider.trigger('to.owl.carousel', [$(this).index(), 1200]);
+                });
+            }
 
-			/* Change active class for dots when slide changes by nav or touch */
-			homeSlider.on('changed.owl.carousel', function(event)
-			{
-				$('.home_slider_custom_dot').removeClass('active');
-				$('.home_slider_custom_dots li').eq(event.page.index).addClass('active');
-			});
-		}
-	}
+            /* Change active class for dots when slide changes by nav or touch */
+            homeSlider.on('changed.owl.carousel', function(event)
+            {
+                $('.home_slider_custom_dot').removeClass('active');
+                $('.home_slider_custom_dots li').eq(event.page.index).addClass('active');
+            });
+        }
+    }
+
 
 	/*
 
@@ -147,47 +150,47 @@ $(document).ready(function()
 
 	*/
 
-function initDatePicker() {
-    if ($('.datepicker').length) {
-        var datePickers = $('.datepicker');
-        datePickers.each(function (index) {
-            var dp = $(this);
-            var placeholder = dp.data('placeholder');
-            dp.val(placeholder);
-            dp.datepicker({
-                minDate: 0, // Устанавливаем минимальную доступную дату как сегодняшний день
-                dateFormat: 'dd/mm/yy', // Устанавливаем формат даты
-                onSelect: function (selectedDate) {
-                    // Проверка на соответствие формату даты
-                    var isValidDate = /^\d{2}\/\d{2}\/\d{4}$/.test(selectedDate);
-                    if (!isValidDate) {
-                        var errorMessage = "Ошибка: Дата должна быть в формате dd/mm/yy";
+    function initDatePicker() {
+        if ($('.datepicker').length) {
+            var datePickers = $('.datepicker');
+            datePickers.each(function (index) {
+                var dp = $(this);
+                var placeholder = dp.data('placeholder');
+                dp.val(placeholder);
+                dp.datepicker({
+                    minDate: 0, // Устанавливаем минимальную доступную дату как сегодняшний день
+                    dateFormat: 'dd/mm/yy', // Устанавливаем формат даты
+                    onSelect: function (selectedDate) {
+                        // Проверка на соответствие формату даты
+                        var isValidDate = /^\d{2}\/\d{2}\/\d{4}$/.test(selectedDate);
+                        if (!isValidDate) {
+                            var errorMessage = "Ошибка: Дата должна быть в формате dd/mm/yy";
+                            var errorMessages = document.getElementById("errorMessages");
+                            errorMessages.textContent = errorMessage;
+                            errorMessages.style.display = "block";
+                            return;
+                        }
+                        // Если ошибок нет, скрываем сообщение об ошибке
                         var errorMessages = document.getElementById("errorMessages");
-                        errorMessages.textContent = errorMessage;
-                        errorMessages.style.display = "block";
-                        return;
-                    }
-                    // Если ошибок нет, скрываем сообщение об ошибке
-                    var errorMessages = document.getElementById("errorMessages");
-                    errorMessages.style.display = "none";
+                        errorMessages.style.display = "none";
 
-                    // Если это первый календарь
-                    if (index === 0) {
-                        // Находим второй календарь по индексу и устанавливаем его минимальную дату как выбранную дату в первом календаре
-                        datePickers.eq(1).datepicker('option', 'minDate', selectedDate);
+                        // Если это первый календарь
+                        if (index === 0) {
+                            // Находим второй календарь по индексу и устанавливаем его минимальную дату как выбранную дату в первом календаре
+                            datePickers.eq(1).datepicker('option', 'minDate', selectedDate);
+                        }
                     }
-                }
-            });
+                });
 
-            // Удаляем обработчик события для ввода цифр
-            dp.off('input');
-            // Запрещаем ручной ввод текста в поле
-            dp.on('keydown', function(e) {
-                e.preventDefault();
+                // Удаляем обработчик события для ввода цифр
+                dp.off('input');
+                // Запрещаем ручной ввод текста в поле
+                dp.on('keydown', function(e) {
+                    e.preventDefault();
+                });
             });
-        });
+        }
     }
-}
 
 
 	/* 
@@ -409,13 +412,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var errorModalWindow = "";
 
         if (nameInput.value.trim() === "") {
-            errorModalWindow = "Пожалуйста, введите ваше имя.";
+            errorModalWindow = "Пожалуйста, введите Ваше имя.";
             isErrorModal = true;
-        } else if (phoneInput.value.trim() === "") {
-            errorModalWindow = "Пожалуйста, введите номер телефона.";
-            isErrorModal = true;
-        } else if (emailInput.value.trim() === "") {
-            errorModalWindow = "Пожалуйста, введите адрес электронной почты.";
+        } else if (phoneInput.value.trim() === "" && emailInput.value.trim() === "") {
+            errorModalWindow = "Пожалуйста, введите номер телефона или адрес электронной почты.";
             isErrorModal = true;
         }
 
@@ -471,9 +471,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-// Функция для проверки стиля элемента и блокировки/разблокировки прокрутки
+// Функция для блокировки/разблокировки прокрутки страницы когда открыта модалка
 function checkModalDisplay(mutationsList, observer) {
     mutationsList.forEach(mutation => {
         if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
