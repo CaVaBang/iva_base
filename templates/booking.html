@@ -4,7 +4,7 @@
 <title>Бронирвание</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="The River template project">
+<meta name="description" content="«Ивушка» - Бронирование">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap-4.1.2/bootstrap.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}">
@@ -85,7 +85,8 @@
 											<div><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Заселение" required="required"></div>
 											<div><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Выселение" required="required"></div>
 											<div><input type="number" class="booking_input booking_input_b" placeholder="Количество гостей" required="required"></div>
-											<div><button class="booking_button trans_200">Забронировать</button></div>
+											<div><button id="openModalButton" class="booking_button trans_200">Забронировать</button></div>
+											<div class="error_message" id="errorMessages"></div>
 										</div>
 									</div>
 								</div>
@@ -94,6 +95,22 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+
+
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<form action="#" class="modal-form" id="modalForm" novalidate>
+				<span class="close">&times;</span>
+				<p style="margin-bottom: 10px;">Оставьте свои контактные данные, для подтверждения бронирования</p>
+				<div><input type="text" class="name" placeholder="Ваше имя:" required="required"/> </div>
+				<div><input type="tel" class="phone" placeholder="Номер телефона:" required="required"/> </div>
+				<div><input type="email" class="email" placeholder="Email:" required="required"/> </div>
+				<textarea rows="4" cols="50" class="message" placeholder="Дополнительные пожелания:" required></textarea>
+				<div><button id="btnModal" class="btn">Отправить </button> </div>
+				<div class="error_message" id="errorModal"></div>
+			</form>
 		</div>
 	</div>
 

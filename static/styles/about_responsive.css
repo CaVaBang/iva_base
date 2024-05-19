@@ -104,6 +104,9 @@
         max-width: 100%;
         text-align: center;
     }
+    .modal-form p {
+        font-size: 22px;
+    }
 }
 
 /************
@@ -541,7 +544,10 @@
     .loaders_container.flex-wrap {
         -ms-flex-wrap: nowrap !important;
         flex-wrap: nowrap !important;
-}
+    }
+    .modal-form p {
+        font-size: 18px;
+    }
 }
 
 /************
