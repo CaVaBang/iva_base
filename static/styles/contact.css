@@ -597,7 +597,7 @@ section
 }
 .home .background_image
 {
-	opacity: 0.28;
+	opacity: 0.40;
 }
 .home_container
 {
@@ -622,30 +622,28 @@ section
 	color: #ffffff;
 	line-height: 1.2;
 }
-.booking_form_container
-{
-	width: 100%;
-	margin-top: 34px;
-	padding-left: 78px;
-	padding-right: 88px;
+.booking_form_container {
+    width: 100%;
+    margin-top: 34px;
+    padding-left: 78px;
+    padding-right: 88px;
 }
-.booking_form
-{
-	display: block;
-	width: 100%;
-}
-.booking_input
-{
-	width: 100%;
-	height: 54px;
-	background: rgba(255,255,255,0.2);
-	border: solid 2px #ffffff;
-	padding-left: 19px;
-	font-size: 14px;
-	font-weight: 500;
-	color: #ffffff;
-	outline: none;
 
+.booking_form {
+    display: block;
+    width: 100%;
+}
+
+.booking_input {
+    width: 100%;
+    height: 54px;
+    background: rgba(255, 255, 255, 0.2);
+    border: solid 2px #ffffff;
+    padding-left: 19px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    outline: none;
 }
 .booking_input_container
 {
@@ -721,23 +719,212 @@ input[type=number]::-webkit-outer-spin-button
 	font-weight: 500 !important;
 	color: #FFFFFF !important;
 }
-.booking_button
-{
-	width: 100%;
-	height: 54px;
-	background: #1ab09f;
-	font-size: 14px;
-	font-weight: 500;
-	color: #ffffff;
-	border: none;
-	outline: none;
-	cursor: pointer;
-}
-.booking_button:hover
-{
-	background: rgba(255,255,255,0.2);
+.booking_button {
+    width: 100%;
+    height: 54px;
+    background: #1ab09f;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
+.booking_button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Стили из второго кода */
+
+.booking_form {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 30px 30px 6px 30px;
+    min-width: 320px;
+    max-width: 100%;
+    width: 100%;
+    border: solid 2px #ffffff;
+    border-radius: 0;
+    background: rgba(60, 63, 65, 0.5);
+    background-clip: padding-box;
+    box-shadow: 0 0 13px 3px rgba(0, 0, 0, 0.5);
+}
+
+#modalForm {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0px 30px 8px 30px;
+    max-width: 100%;
+    width: 100%;
+    border: solid 2px #ffffff;
+    border-radius: 0;
+    background: rgba(40, 43, 45, 0.8);
+    background-clip: padding-box;
+    box-shadow: 0 0 13px 3px rgba(0, 0, 0, 0.5);
+}
+
+#myModal input:focus-visible,
+#myModal textarea:focus-visible,
+#myModal button:focus-visible {
+    outline: none;
+}
+
+textarea,
+input {
+    display: block;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 0;
+    width: 100%;
+    height: 54px;
+    background-clip: padding-box;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    border: solid 2px #ffffff;
+}
+
+textarea {
+    overflow: hidden;
+    padding-top: 12px;
+    width: 100%;
+    height: 110px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border: solid 2px #ffffff;
+
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    background-color: #1ab09f;
+    box-shadow: none;
+    border-radius: initial;
+}
+
+input.name,
+input.email,
+input.phone,
+input.message {
+    background: rgba(255, 255, 255, 0.3);
+    padding-left: 25px;
+    border-radius: 0;
+}
+
+.modal-form p {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    line-height: 2;
+    font-weight: 600;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+:-moz-placeholder {
+    color: #fff;
+}
+
+::-moz-placeholder {
+    color: #fff;
+}
+
+:-ms-input-placeholder {
+    color: #fff;
+}
+
+input:focus,
+textarea:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
+    border-radius: 0;
+}
+
+:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+:focus::-moz-placeholder {
+    color: transparent;
+}
+
+:focus::placeholder {
+    color: transparent;
+}
+
+.btn {
+    border: 0;
+    width: 100%;
+    height: 54px;
+    margin-bottom: 20px;
+    background: #1ab09f;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+.btn:hover {
+    border: 0;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 0;
+}
+
+.btn:active {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 0;
+}
+
+.btn.focus,
+.btn:focus {
+    box-shadow: none;
+}
+input:focus, textarea:focus {
+    background-color: none;
+    box-shadow: none;
+}
+.home_container .error_message {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: red;
+    white-space: nowrap;
+
+}
+.modal-content .error_message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: red;
+    text-align: center;
+}
+#myModal input:focus-visible,
+#myModal textarea:focus-visible,
+#myModal button:focus-visible
+{
+    outline: none;
+}
+button:focus {
+    outline: none;
+}
 
 /*********************************
 6. Contact
@@ -848,32 +1035,6 @@ input[type=number]::-webkit-outer-spin-button
 .contact_button:hover
 {
 	box-shadow: 0px 10px 23px rgba(0,0,0,0.15);
-}
-.contact_map
-{
-	width: calc(100% + ((100vw - 1120px) / 2));
-	height: 100%;
-}
-.map
-{
-	width: 100%;
-	height: 100%;
-}
-.yandex_map
-{
-	width: 100%;
-	height: 100%;
-}
-.map_container
-{
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
-#map
-{
-	width: 100%;
-	height: calc(100% + 30px);
 }
 
 /*********************************
@@ -1021,4 +1182,84 @@ input[type=number]::-webkit-outer-spin-button
 	font-size: 15px;
 	font-weight: 500;
 	color: #6d6d6d;
+}
+.modal {
+    display: none;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #fff;
+    border-radius: 0;
+    width: 60%; /* Ширина модалки */
+    max-width: 900px; /* Максимальная ширина для больших экранов */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.text_block {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 40px;
+}
+.text_block li {
+    list-style-type: none; /* Убираем стандартное отображение маркера */
+}
+
+.text_block li::before {
+    content: "•"; /* Вставляем желаемый символ точки */
+    margin-right: 12px; /* Задаем отступ между точкой и текстом */
+}
+.page_section_2 .text-63__text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    color: #000000;
+    border-color: #000000;
+    border-width: 2px;
+    border-radius: 0px;
+    background-color: #f7f7f7;
+    text-align: left;
+    mobile_size: 13;
+}
+
+.text-63__text {
+    border-style: solid;
+    padding: 30px;
+
+.shadow_style_3 {
+    box-shadow: 8.0px 8.0px 15.0px 10.0px #ededed;
+}
+*, *:after, *:before {
+    box-sizing: border-box;
 }

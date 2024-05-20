@@ -941,7 +941,6 @@ input:focus, textarea:focus {
     font-size: 14px;
     color: red;
     text-align: center;
-    white-space: nowrap;
 }
 
 

@@ -598,7 +598,7 @@ section
 }
 .home .background_image
 {
-	opacity: 0.28;
+	opacity: 0.40;
 }
 .home_container
 {
@@ -916,7 +916,6 @@ input:focus, textarea:focus {
     font-size: 14px;
     color: red;
     text-align: center;
-    white-space: nowrap;
 }
 #myModal input:focus-visible,
 #myModal textarea:focus-visible,

@@ -19,11 +19,6 @@ def booking():
     return render_template('booking.html')
 
 
-@app.route('/elements.html')
-def elements():
-    return render_template('elements.html')
-
-
 @app.route('/map.html')
 def blog():
     return render_template('map.html')
