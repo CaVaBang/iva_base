@@ -383,6 +383,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var errorMessages = document.getElementById("errorMessages");
     var errorModal = document.getElementById("errorModal");
 
+    // Скрытые поля в модальной форме
+    var modalCheckIn = document.getElementById("modalCheckIn");
+    var modalCheckOut = document.getElementById("modalCheckOut");
+    var modalGuests = document.getElementById("modalGuests");
+
 
     openModalButton.onclick = function() {
         var isError = false;

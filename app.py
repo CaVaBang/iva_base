@@ -34,7 +34,7 @@ def contact():
     return render_template('contact.html')
 
 
-# Настройки подключения к базе данных
+# Подключения к базе данных
 connection = pymysql.connect(
     host='CaVaBang.mysql.pythonanywhere-services.com',
     user='CaVaBang',
