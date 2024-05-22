@@ -33,6 +33,7 @@ def blog():
 def contact():
     return render_template('contact.html')
 
+
 # Настройки подключения к базе данных
 connection = pymysql.connect(
     host='CaVaBang.mysql.pythonanywhere-services.com',
@@ -42,16 +43,21 @@ connection = pymysql.connect(
     cursorclass=pymysql.cursors.DictCursor
 )
 
+
 @app.route('/submit_form', methods=['POST'])
 def submit_form():
     name = request.form['name']
     phone = request.form['phone']
     email = request.form['email']
     message = request.form['message']
+    check_in = request.form['check_in']
+    check_out = request.form['check_out']
+    guests = request.form['guests']
 
     with connection.cursor() as cursor:
-        sql = "INSERT INTO bookings (name, phone, email, message) VALUES (%s, %s, %s, %s)"
-        cursor.execute(sql, (name, phone, email, message))
+        sql = """INSERT INTO bookings (name, phone, email, message, check_in, check_out, guests)
+                 VALUES (%s, %s, %s, %s, %s, %s, %s)"""
+        cursor.execute(sql, (name, phone, email, message, check_in, check_out, guests))
         connection.commit()
 
     return redirect(url_for('thank_you'))
