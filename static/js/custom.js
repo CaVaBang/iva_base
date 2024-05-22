@@ -411,8 +411,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Если ошибок нет, передаем значения в скрытые поля модальной формы
-        modalCheckIn.value = bookingIn.value;
-        modalCheckOut.value = bookingOut.value;
+        modalCheckIn.value = formatDate(bookingIn.value);
+        modalCheckOut.value = formatDate(bookingOut.value);
         modalGuests.value = bookingGuests.value;
 
         // Если ошибок нет, открываем модальное окно
