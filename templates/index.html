@@ -114,10 +114,10 @@
 			<form action="/submit_form" class="modal-form" id="modalForm" method="POST" novalidate>
 				<span class="close">&times;</span>
 				<p style="margin-bottom: 10px;">Оставьте свои контактные данные, для подтверждения бронирования</p>
-				<div><input type="text" class="name" placeholder="Ваше имя:" required="required"/> </div>
-				<div><input type="tel" class="phone" placeholder="Номер телефона:" required="required"/> </div>
-				<div><input type="email" class="email" placeholder="Email:" required="required"/> </div>
-				<textarea rows="4" cols="50" class="message" placeholder="Дополнительные пожелания:" required></textarea>
+				<div><input type="text" class="name" name="name" placeholder="Ваше имя:" required="required"/> </div>
+				<div><input type="tel" class="phone" name="phone" placeholder="Номер телефона:" required="required"/> </div>
+				<div><input type="email" class="email" name="email" placeholder="Email:" required="required"/> </div>
+				<textarea rows="4" cols="50" class="message" name="message" placeholder="Дополнительные пожелания:" required></textarea>
 				<div><button id="btnModal" class="btn">Отправить </button> </div>
 				<div class="error_message" id="errorModal"></div>
 			</form>
