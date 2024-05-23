@@ -778,7 +778,7 @@ input[type=number]::-webkit-outer-spin-button {
     box-shadow: 0 0 13px 3px rgba(0, 0, 0, 0.5);
 }
 
-#modalForm {
+#modalForm, #thankYouMessage {
     overflow: hidden;
     margin: 0 auto;
     padding: 0px 30px 8px 30px;
@@ -822,7 +822,6 @@ textarea {
     border-radius: 0;
     background: rgba(255, 255, 255, 0.3);
     border: solid 2px #ffffff;
-
 }
 
 input[type="submit"] {
@@ -920,10 +919,12 @@ textarea:focus {
 .btn:focus {
     box-shadow: none;
 }
+
 input:focus, textarea:focus {
     background-color: none;
     box-shadow: none;
 }
+
 .home_container .error_message {
     position: absolute;
     top: -25px;
@@ -932,8 +933,8 @@ input:focus, textarea:focus {
     font-size: 14px;
     color: red;
     white-space: nowrap;
-
 }
+
 .modal-content .error_message {
     display: flex;
     justify-content: center;
@@ -942,6 +943,24 @@ input:focus, textarea:focus {
     color: red;
     text-align: center;
 }
+
+/* Дополнительные стили для сообщения "Спасибо! Ваша заявка принята." */
+#thankYouMessage p {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    line-height: 2;
+    font-weight: 600;
+    text-align: center;
+}
+
+#thankYouMessage .btn {
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
 
 
 /*********************************
