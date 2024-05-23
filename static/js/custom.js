@@ -512,9 +512,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!phoneInput.value.startsWith("+7")) {
             phoneInput.value = "+7" + phoneInput.value.replace(/\D/g, '');
         } else {
-            phoneInput.value = "+7" + phoneInput.value.slice(2).replace(/\D/g, '');
+            // Оставляем только цифры после "+7" и ограничиваем их количество до 10
+            var cleaned = phoneInput.value.slice(2).replace(/\D/g, '').slice(0, 10);
+            phoneInput.value = "+7" + cleaned;
         }
-        emailInput.value = emailInput.value.slice(0, 10);
     });
 
     // Ограничение на поле "Email"
