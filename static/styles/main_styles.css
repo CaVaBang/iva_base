@@ -956,8 +956,6 @@ input:focus, textarea:focus {
 }
 
 #thankYouMessage .btn {
-    width: auto;
-    margin: 0 auto;
     display: block;
 }
 
