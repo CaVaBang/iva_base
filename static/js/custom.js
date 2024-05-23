@@ -514,6 +514,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             phoneInput.value = "+7" + phoneInput.value.slice(2).replace(/\D/g, '');
         }
+        emailInput.value = emailInput.value.slice(0, 10);
     });
 
     // Ограничение на поле "Email"
