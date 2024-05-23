@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var bookingIn = document.querySelector(".booking_in");
     var bookingOut = document.querySelector(".booking_out");
     var bookingGuests = document.querySelector(".booking_input_b");
-    var nameInput = document.querySelector(".name")
+    var nameInput = document.querySelector(".name");
     var phoneInput = document.querySelector(".phone");
     var emailInput = document.querySelector(".email");
     var messageInput = document.querySelector(".message");
@@ -432,6 +432,9 @@ document.addEventListener('DOMContentLoaded', function () {
             isErrorModal = true;
         } else if (phoneInput.value.trim() === "" && emailInput.value.trim() === "") {
             errorModalWindow = "Пожалуйста, введите номер телефона или адрес электронной почты.";
+            isErrorModal = true;
+        } else if (!validateEmail(emailInput.value)) {
+            errorModalWindow = "Пожалуйста, введите корректный адрес электронной почты.";
             isErrorModal = true;
         }
 
@@ -512,7 +515,24 @@ document.addEventListener('DOMContentLoaded', function () {
             phoneInput.value = "+7" + phoneInput.value.slice(2).replace(/\D/g, '');
         }
     });
+
+    // Ограничение на поле "Email"
+    emailInput.addEventListener('input', function() {
+        emailInput.value = emailInput.value.slice(0, 50);
+    });
+
+    // Ограничение на поле "Дополнительные пожелания"
+    messageInput.addEventListener('input', function() {
+        messageInput.value = messageInput.value.slice(0, 250);
+    });
+
+    // Функция для проверки корректности email
+    function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
 });
+
 
 
 
