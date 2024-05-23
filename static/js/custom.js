@@ -382,6 +382,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var messageInput = document.querySelector(".message");
     var errorMessages = document.getElementById("errorMessages");
     var errorModal = document.getElementById("errorModal");
+    var thankYouMessage = document.getElementById("thankYouMessage");
+    var closeModalBtn = document.getElementById("closeModal");
 
     // Скрытые поля в модальной форме
     var modalCheckIn = document.getElementById("modalCheckIn");
@@ -438,12 +440,51 @@ document.addEventListener('DOMContentLoaded', function () {
             errorModal.style.display = "block";
             return;
         } else {
-            // Если ошибок нет, можно отправить форму
-            document.querySelector("#modalForm").submit();
+            // Если ошибок нет, отправляем форму с использованием Fetch API
+            var formData = new FormData(document.getElementById('modalForm'));
+            fetch(document.getElementById('modalForm').action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('modalForm').style.display = 'none';
+                    thankYouMessage.style.display = 'block';
+                } else {
+                    return response.text().then(text => { throw new Error(text) });
+                }
+            })
+            .catch(error => {
+                errorModal.textContent = `Ошибка: ${error.message}`;
+                errorModal.style.display = 'block';
+            });
         }
     }
 
+    // Закрытие модального окна при клике на крестик или вне окна
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        modal.style.display = "none";
+        resetModal();
+    }
 
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            resetModal();
+        }
+    }
+
+    closeModalBtn.onclick = function() {
+        modal.style.display = "none";
+        resetModal();
+    }
+
+    function resetModal() {
+        thankYouMessage.style.display = 'none';
+        document.getElementById('modalForm').style.display = 'block';
+        document.getElementById('modalForm').reset();
+    }
 
     // Скрытие сообщения об ошибке при фокусе на поле ввода
     bookingIn.addEventListener('focus', function() {
@@ -469,19 +510,8 @@ document.addEventListener('DOMContentLoaded', function () {
     emailInput.addEventListener('focus', function() {
         errorModal.style.display = "none";
     });
-
-    // Закрытие модального окна при клике на крестик или вне окна
-    var span = document.getElementsByClassName("close")[0];
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
 });
+
 
 
 
