@@ -35,13 +35,13 @@ def contact():
 
 
 # Подключения к базе данных
-# connection = pymysql.connect(
-#     host='CaVaBang.mysql.pythonanywhere-services.com',
-#     user='CaVaBang',
-#     password='2PacNotorious',
-#     database='CaVaBang$Clients',
-#     cursorclass=pymysql.cursors.DictCursor
-# )
+connection = pymysql.connect(
+    host='CaVaBang.mysql.pythonanywhere-services.com',
+    user='CaVaBang',
+    password='2PacNotorious',
+    database='CaVaBang$Clients',
+    cursorclass=pymysql.cursors.DictCursor
+)
 
 
 @app.route('/submit_form', methods=['POST'])
