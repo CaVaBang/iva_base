@@ -729,7 +729,7 @@ input[type=number]::-webkit-outer-spin-button {
     box-shadow: 0 0 13px 3px rgba(0, 0, 0, 0.5);
 }
 
-#modalForm {
+#modalForm, #thankYouMessage {
     overflow: hidden;
     margin: 0 auto;
     padding: 0px 30px 8px 30px;
@@ -902,7 +902,20 @@ input:focus, textarea:focus {
 button:focus {
     outline: none;
 }
+/* Дополнительные стили для сообщения "Спасибо! Ваша заявка принята." */
+#thankYouMessage p {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    line-height: 2;
+    font-weight: 600;
+    text-align: center;
+}
 
+#thankYouMessage .btn {
+    display: block;
+}
 /*********************************
 6. About
 *********************************/

@@ -506,16 +506,18 @@ document.addEventListener('DOMContentLoaded', function () {
         nameInput.value = nameInput.value.replace(/[^a-zA-Zа-яА-ЯёЁ]/g, '').slice(0, 30);
     });
 
-    // Обработчик для поля "Номер телефона"
     phoneInput.value = "+7";
     phoneInput.addEventListener('input', function() {
-        if (!phoneInput.value.startsWith("+7")) {
-            phoneInput.value = "+7" + phoneInput.value.replace(/\D/g, '');
-        } else {
-            // Оставляем только цифры после "+7" и ограничиваем их количество до 10
-            var cleaned = phoneInput.value.slice(2).replace(/\D/g, '').slice(0, 10);
-            phoneInput.value = "+7" + cleaned;
+        let input = phoneInput.value;
+
+        // Если введенный номер не начинается с "+7", исправляем это
+        if (!input.startsWith("+7")) {
+            input = "+7" + input.replace(/\D/g, '');
         }
+
+        // Убираем все нецифровые символы и ограничиваем до 10 цифр после "+7"
+        let cleaned = input.slice(2).replace(/\D/g, '').slice(0, 10);
+        phoneInput.value = "+7" + cleaned;
     });
 
     // Ограничение на поле "Email"
