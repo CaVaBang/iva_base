@@ -404,10 +404,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if (nameInput.value.trim() === "") {
             errorModalWindow = "Пожалуйста, введите Ваше имя.";
             isErrorModal = true;
+        } else if (phoneInput.value.trim() === "+7" && emailInput.value.trim() === "") {
+            errorModalWindow = "Пожалуйста, введите номер телефона или адрес электронной почты.";
+            isErrorModal = true;
         } else if (phoneInput.value.trim() === "" && emailInput.value.trim() === "") {
             errorModalWindow = "Пожалуйста, введите номер телефона или адрес электронной почты.";
             isErrorModal = true;
-        } else if (!validateEmail(emailInput.value)) {
+        } else if (emailInput.value.trim() !== "" && !validateEmail(emailInput.value)) {
             errorModalWindow = "Пожалуйста, введите корректный адрес электронной почты.";
             isErrorModal = true;
         }

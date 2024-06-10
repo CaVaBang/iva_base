@@ -179,13 +179,24 @@ document.addEventListener('DOMContentLoaded', function () {
     var bookingIn = document.querySelector(".booking_in");
     var bookingOut = document.querySelector(".booking_out");
     var bookingGuests = document.querySelector(".booking_input_b");
-    var nameInput = document.querySelector(".name")
+    var nameInput = document.querySelector(".name");
     var phoneInput = document.querySelector(".phone");
     var emailInput = document.querySelector(".email");
     var messageInput = document.querySelector(".message");
     var errorMessages = document.getElementById("errorMessages");
     var errorModal = document.getElementById("errorModal");
+    var thankYouMessage = document.getElementById("thankYouMessage");
+    var closeModal = document.getElementById("closeModal");
 
+    // Скрытые поля в модальной форме
+    var modalCheckIn = document.getElementById("modalCheckIn");
+    var modalCheckOut = document.getElementById("modalCheckOut");
+    var modalGuests = document.getElementById("modalGuests");
+
+    function formatDate(date) {
+        var parts = date.split('/');
+        return parts[2] + '-' + parts[1] + '-' + parts[0]; // Преобразование в формат YYYY-MM-DD
+    }
 
     openModalButton.onclick = function() {
         var isError = false;
@@ -204,6 +215,11 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
+        // Если ошибок нет, передаем значения в скрытые поля модальной формы
+        modalCheckIn.value = formatDate(bookingIn.value);
+        modalCheckOut.value = formatDate(bookingOut.value);
+        modalGuests.value = bookingGuests.value;
+
         // Если ошибок нет, открываем модальное окно
         modal.style.display = "block";
     }
@@ -217,8 +233,14 @@ document.addEventListener('DOMContentLoaded', function () {
         if (nameInput.value.trim() === "") {
             errorModalWindow = "Пожалуйста, введите Ваше имя.";
             isErrorModal = true;
+        } else if (phoneInput.value.trim() === "+7" && emailInput.value.trim() === "") {
+            errorModalWindow = "Пожалуйста, введите номер телефона или адрес электронной почты.";
+            isErrorModal = true;
         } else if (phoneInput.value.trim() === "" && emailInput.value.trim() === "") {
             errorModalWindow = "Пожалуйста, введите номер телефона или адрес электронной почты.";
+            isErrorModal = true;
+        } else if (emailInput.value.trim() !== "" && !validateEmail(emailInput.value)) {
+            errorModalWindow = "Пожалуйста, введите корректный адрес электронной почты.";
             isErrorModal = true;
         }
 
@@ -227,12 +249,19 @@ document.addEventListener('DOMContentLoaded', function () {
             errorModal.style.display = "block";
             return;
         } else {
-            // Если ошибок нет, можно отправить форму
-            document.querySelector("#modalForm").submit();
+            // Показываем сообщение об успехе и скрываем форму
+            document.querySelector("#modalForm").style.display = "none";
+            thankYouMessage.style.display = "block";
         }
     }
 
-
+    // Обработчик для закрытия модалки
+    closeModal.onclick = function() {
+        modal.style.display = "none";
+        document.querySelector("#modalForm").style.display = "block";
+        thankYouMessage.style.display = "none";
+        document.querySelector("#modalForm").reset();
+    }
 
     // Скрытие сообщения об ошибке при фокусе на поле ввода
     bookingIn.addEventListener('focus', function() {
@@ -269,6 +298,48 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.target == modal) {
             modal.style.display = "none";
         }
+    }
+
+    // Ограничение на поле "Количество гостей"
+    bookingGuests.addEventListener('input', function() {
+        if (bookingGuests.value > 100) {
+            bookingGuests.value = 100;
+        }
+    });
+
+    // Ограничение на поле "Ваше имя"
+    nameInput.addEventListener('input', function() {
+        nameInput.value = nameInput.value.replace(/[^a-zA-Zа-яА-ЯёЁ]/g, '').slice(0, 30);
+    });
+
+    phoneInput.value = "+7";
+    phoneInput.addEventListener('input', function() {
+        let input = phoneInput.value;
+
+        // Если введенный номер не начинается с "+7", исправляем это
+        if (!input.startsWith("+7")) {
+            input = "+7" + input.replace(/\D/g, '');
+        }
+
+        // Убираем все нецифровые символы и ограничиваем до 10 цифр после "+7"
+        let cleaned = input.slice(2).replace(/\D/g, '').slice(0, 10);
+        phoneInput.value = "+7" + cleaned;
+    });
+
+    // Ограничение на поле "Email"
+    emailInput.addEventListener('input', function() {
+        emailInput.value = emailInput.value.slice(0, 50);
+    });
+
+    // Ограничение на поле "Дополнительные пожелания"
+    messageInput.addEventListener('input', function() {
+        messageInput.value = messageInput.value.slice(0, 250);
+    });
+
+    // Функция для проверки корректности email
+    function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
     }
 });
 
