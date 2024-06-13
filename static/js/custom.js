@@ -439,6 +439,9 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (emailInput.value.trim() !== "" && !validateEmail(emailInput.value)) {
             errorModalWindow = "Пожалуйста, введите корректный адрес электронной почты.";
             isErrorModal = true;
+        } else if (phoneInput.value.trim().length !== 12) { // Добавленная проверка длины номера телефона
+            errorModalWindow = "Пожалуйста, введите корректный номер телефона.";
+            isErrorModal = true;
         }
 
         if (isErrorModal) {
