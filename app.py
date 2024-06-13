@@ -64,33 +64,34 @@ def submit_form():
         cursor.execute(sql, (name, phone, email, message, check_in, check_out, guests))
         connection.commit()
 
-    # Отправка email уведомления
-    admin_email = 'musnigga@mail.ru'
-    subject = 'Новая бронь'
-    body = f'Имя: {name}\nТелефон: {phone}\nEmail: {email}\nСообщение: {message}\nДата заезда: {check_in}\nДата выезда: {check_out}\nГости: {guests}'
-    send_email(subject, body, admin_email)
+    # # Отправка email уведомления
+    # admin_email = 'musnigga@mail.ru'
+    # subject = 'Новая бронь'
+    # body = f'Имя: {name}\nТелефон: {phone}\nEmail: {email}\nСообщение: {message}\nДата заезда: {check_in}\nДата выезда: {check_out}\nГости: {guests}'
+    # send_email(subject, body, admin_email)
 
     return redirect(url_for('thank_you'))
 
-def send_email(subject, body, to_email):
-    from_email = 'test_the_iva_site@mail.ru'
-    password = '10923874q'
 
-    # Настройка MIME сообщения
-    msg = MIMEMultipart()
-    msg['From'] = from_email
-    msg['To'] = to_email
-    msg['Subject'] = subject
-
-    msg.attach(MIMEText(body, 'plain'))
-
-    # Настройка SMTP сервера
-    server = smtplib.SMTP('smtp.mail.ru', 587)
-    server.starttls()
-    server.login(from_email, password)
-    text = msg.as_string()
-    server.sendmail(from_email, to_email, text)
-    server.quit()
+# def send_email(subject, body, to_email):
+#     from_email = 'test_the_iva_site@mail.ru'
+#     password = '10923874q'
+#
+#     # Настройка MIME сообщения
+#     msg = MIMEMultipart()
+#     msg['From'] = from_email
+#     msg['To'] = to_email
+#     msg['Subject'] = subject
+#
+#     msg.attach(MIMEText(body, 'plain'))
+#
+#     # Настройка SMTP сервера
+#     server = smtplib.SMTP('smtp.mail.ru', 587)
+#     server.starttls()
+#     server.login(from_email, password)
+#     text = msg.as_string()
+#     server.sendmail(from_email, to_email, text)
+#     server.quit()
 
 
 @app.route('/thank_you')
