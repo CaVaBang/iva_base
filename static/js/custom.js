@@ -545,25 +545,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-$(document).ready(function() {
-    $('#bookingForm').on('submit', function(event) {
-        event.preventDefault(); // Предотвращаем стандартное поведение формы
-
-        $.ajax({
-            type: 'POST',
-            url: '/submit_form',
-            data: $(this).serialize(),
-            success: function(response) {
-                $('#thankYouMessage').text(response.message);
-                $('#thankYouModal').show();
-            }
-        });
-    });
-});
-
-function closeModal() {
-    $('#thankYouModal').hide();
-}
 
 
 // Функция для блокировки/разблокировки прокрутки страницы когда открыта модалка
