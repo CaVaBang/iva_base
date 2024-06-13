@@ -468,7 +468,6 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .catch(function(error) {
                 console.error('There has been a problem with your fetch operation:', error);
-                // Обработка ошибок, если нужно
             });
         }
     }
