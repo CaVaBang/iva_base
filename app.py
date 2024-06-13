@@ -70,6 +70,8 @@ def submit_form():
     # body = f'Имя: {name}\nТелефон: {phone}\nEmail: {email}\nСообщение: {message}\nДата заезда: {check_in}\nДата выезда: {check_out}\nГости: {guests}'
     # send_email(subject, body, admin_email)
 
+    return '', 200
+
 
 # def send_email(subject, body, to_email):
 #     from_email = 'test_the_iva_site@mail.ru'
