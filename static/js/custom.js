@@ -452,6 +452,8 @@ document.addEventListener('DOMContentLoaded', function () {
             // Показываем сообщение об успехе и скрываем форму
             document.querySelector("#modalForm").style.display = "none";
             thankYouMessage.style.display = "block";
+            // Отправляем форму программно
+            document.querySelector("#modalForm").submit();
         }
     }
 
