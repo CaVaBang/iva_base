@@ -86,14 +86,10 @@ def send_email(subject, body, to_email):
     msg.attach(MIMEText(body, 'plain'))
 
     # Настройка SMTP сервера
-    server = smtplib.SMTP('smtp.mail.ru', 587)
+    server = smtplib.SMTP_SSL('smtp.mail.ru', 465)
     server.starttls()
     server.login(from_email, password)
     text = msg.as_string()
     server.sendmail(from_email, to_email, text)
     server.quit()
 
-
-@app.route('/thank_you')
-def thank_you():
-    return 'Спасибо! Ваша заявка принята.'
