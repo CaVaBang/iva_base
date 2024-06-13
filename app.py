@@ -87,7 +87,6 @@ def send_email(subject, body, to_email):
 
     # Настройка SMTP сервера
     server = smtplib.SMTP_SSL('smtp.mail.ru', 465)
-    server.starttls()
     server.login(from_email, password)
     text = msg.as_string()
     server.sendmail(from_email, to_email, text)
