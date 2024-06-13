@@ -70,7 +70,7 @@ def submit_form():
     # body = f'Имя: {name}\nТелефон: {phone}\nEmail: {email}\nСообщение: {message}\nДата заезда: {check_in}\nДата выезда: {check_out}\nГости: {guests}'
     # send_email(subject, body, admin_email)
 
-    return redirect(url_for('thank_you'))
+    return '', 200
 
 
 # def send_email(subject, body, to_email):
