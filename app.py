@@ -1,6 +1,6 @@
 import smtplib
 
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from flask_sqlalchemy import SQLAlchemy
@@ -70,7 +70,7 @@ def submit_form():
     # body = f'Имя: {name}\nТелефон: {phone}\nEmail: {email}\nСообщение: {message}\nДата заезда: {check_in}\nДата выезда: {check_out}\nГости: {guests}'
     # send_email(subject, body, admin_email)
 
-    #return redirect(url_for('thank_you'))
+    return jsonify({'status': 'success', 'message': 'Спасибо! Ваша заявка принята.'})
 
 
 # def send_email(subject, body, to_email):
