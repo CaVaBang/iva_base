@@ -242,6 +242,9 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (emailInput.value.trim() !== "" && !validateEmail(emailInput.value)) {
             errorModalWindow = "Пожалуйста, введите корректный адрес электронной почты.";
             isErrorModal = true;
+        } else if (phoneInput.value.trim().length !== 12) { // Добавленная проверка длины номера телефона
+            errorModalWindow = "Пожалуйста, введите корректный номер телефона.";
+            isErrorModal = true;
         }
 
         if (isErrorModal) {
@@ -249,9 +252,26 @@ document.addEventListener('DOMContentLoaded', function () {
             errorModal.style.display = "block";
             return;
         } else {
-            // Показываем сообщение об успехе и скрываем форму
-            document.querySelector("#modalForm").style.display = "none";
-            thankYouMessage.style.display = "block";
+            // Собираем данные для отправки
+            var formData = new FormData(document.getElementById("modalForm"));
+
+            // Отправляем данные на сервер
+            fetch('/submit_form', {
+                method: 'POST',
+                body: formData
+            })
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error('Возникла ошибка');
+                }
+                // Показываем сообщение об успехе и скрываем форму
+                document.querySelector("#modalForm").style.display = "none";
+                thankYouMessage.style.display = "block";
+                modal.style.display = "block"; // Показываем модалку "Спасибо"
+            })
+            .catch(function(error) {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
         }
     }
 
