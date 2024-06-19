@@ -43,7 +43,7 @@ def contact():
 # Подключения к базе данных
 connection = pymysql.connect(
     host='localhost',
-    user='cj34869',
+    user='cj34869_bookings',
     password='igYz6qO2UP@!',
     database='cj34869_bookings',
     cursorclass=pymysql.cursors.DictCursor
