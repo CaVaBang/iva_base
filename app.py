@@ -40,39 +40,33 @@ def contact():
     return render_template('contact.html')
 
 
-# # Подключения к базе данных
-# connection = pymysql.connect(
-#     host='CaVaBang.mysql.pythonanywhere-services.com',
-#     user='CaVaBang',
-#     password='2PacNotorious',
-#     database='CaVaBang$Clients',
-#     cursorclass=pymysql.cursors.DictCursor
-# )
-#
-#
-# @app.route('/submit_form', methods=['POST'])
-# def submit_form():
-#     name = request.form['name']
-#     phone = request.form['phone']
-#     email = request.form['email']
-#     message = request.form['message']
-#     check_in = request.form['check_in']
-#     check_out = request.form['check_out']
-#     guests = request.form['guests']
-#
-#     with connection.cursor() as cursor:
-#         sql = """INSERT INTO bookings (name, phone, email, message, check_in, check_out, guests)
-#                  VALUES (%s, %s, %s, %s, %s, %s, %s)"""
-#         cursor.execute(sql, (name, phone, email, message, check_in, check_out, guests))
-#         connection.commit()
-#
-#     # Отправка email уведомления
-#     admin_email = 'musnigga@mail.ru'
-#     subject = 'Новая бронь'
-#     body = f'Имя: {name}\nТелефон: {phone}\nEmail: {email}\nСообщение: {message}\nДата заезда: {check_in}\nДата выезда: {check_out}\nГости: {guests}'
-#     send_email(subject, body, admin_email)
-#
-#     return '', 200
+# Подключения к базе данных
+connection = pymysql.connect(
+    host='localhost',
+    user='cj34869',
+    password='igYz6qO2UP@!',
+    database='cj34869_bookings',
+    cursorclass=pymysql.cursors.DictCursor
+)
+
+
+@app.route('/submit_form', methods=['POST'])
+def submit_form():
+    name = request.form['name']
+    phone = request.form['phone']
+    email = request.form['email']
+    message = request.form['message']
+    check_in = request.form['check_in']
+    check_out = request.form['check_out']
+    guests = request.form['guests']
+
+    with connection.cursor() as cursor:
+        sql = """INSERT INTO bookings (name, phone, email, message, check_in, check_out, guests)
+                 VALUES (%s, %s, %s, %s, %s, %s, %s)"""
+        cursor.execute(sql, (name, phone, email, message, check_in, check_out, guests))
+        connection.commit()
+
+    return '', 200
 #
 #
 # def send_email(subject, body, to_email):
