@@ -1,4 +1,8 @@
 import smtplib
+import os
+import sys
+
+sys.path.append('/home/c/cj34869/public_html/env/lib/python3.6/site-packages/')
 
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from email.mime.text import MIMEText
@@ -7,10 +11,8 @@ from flask_sqlalchemy import SQLAlchemy
 import mysql.connector
 import pymysql.cursors
 
-
-
 app = Flask(__name__)
-
+application = app
 
 @app.route('/')
 @app.route('/index.html')

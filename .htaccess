@@ -1,0 +1,8 @@
+Options -Indexes +ExecCGI
+AddHandler wsgi-script .py
+DirectoryIndex app.py
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !/app.py
+RewriteRule ^(.*)$ /app.py/$1 [L]
