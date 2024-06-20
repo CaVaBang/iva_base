@@ -66,25 +66,39 @@ def submit_form():
         cursor.execute(sql, (name, phone, email, message, check_in, check_out, guests))
         connection.commit()
 
-    return '', 200
-#
-#
-# def send_email(subject, body, to_email):
-#     from_email = 'test_the_iva_site@mail.ru'
-#     password = '10923874q'
-#
-#     # Настройка MIME сообщения
-#     msg = MIMEMultipart()
-#     msg['From'] = from_email
-#     msg['To'] = to_email
-#     msg['Subject'] = subject
-#
-#     msg.attach(MIMEText(body, 'plain'))
-#
-#     # Настройка SMTP сервера
-#     server = smtplib.SMTP_SSL('smtp.mail.ru', 465)
-#     server.login(from_email, password)
-#     text = msg.as_string()
-#     server.sendmail(from_email, to_email, text)
-#     server.quit()
+    send_email(name, phone, email, message, check_in, check_out, guests)
 
+    return '', 200
+
+
+def send_email(name, phone, email, message, check_in, check_out, guests):
+    smtp_server = "smtp.timeweb.ru"
+    port = 465  # Для SSL
+    sender_email = "cj34869@cj34869.tw1.ru"
+    sender_password = "igYz6qO2UP@!"
+    admin_email = "musnigga@mail.ru"
+
+    # Создание MIME сообщения
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = admin_email
+    msg['Subject'] = "New Booking Received"
+    body = (f"New booking details:\n\n"
+            f"Name: {name}\n"
+            f"Phone: {phone}\n"
+            f"Email: {email}\n"
+            f"Message: {message}\n"
+            f"Check-in: {check_in}\n"
+            f"Check-out: {check_out}\n"
+            f"Guests: {guests}\n")
+    msg.attach(MIMEText(body, 'plain'))
+
+    try:
+        # Настройка и отправка email
+        server = smtplib.SMTP_SSL(smtp_server, port)
+        server.login(sender_email, sender_password)
+        server.sendmail(sender_email, admin_email, msg.as_string())
+        server.quit()
+        print("Email sent to admin successfully")
+    except Exception as e:
+        print(f"Failed to send email: {e}")
