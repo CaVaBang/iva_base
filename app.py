@@ -67,9 +67,48 @@ def submit_form():
         connection.commit()
 
     #send_email(name, phone, email, message, check_in, check_out, guests)
+    send_email(name, phone, email, message, check_in, check_out, guests)
+
 
     return '', 200
 
+
+def send_email(name, phone, email, message, check_in, check_out, guests):
+    # Настройки для подключения к SMTP серверу Timeweb
+    smtp_server = "smtp.timeweb.ru"
+    smtp_port = 465
+    smtp_login = "cj34869@cj34869.tw1.ru"  # замените на ваш email
+    smtp_password = "igYz6qO2UP@!"  # замените на ваш пароль
+
+    # Создание сообщения
+    msg = MIMEMultipart()
+    msg['From'] = smtp_login
+    msg['To'] = 'musnigga@mail.ru'  # можно отправить самому себе или указать нужный email
+    msg['Subject'] = "Новая запись"
+
+    # Текст сообщения
+    body = f"""
+    Новая запись:
+    Имя: {name}
+    Телефон: {phone}
+    Email: {email}
+    Сообщение: {message}
+    Дата заезда: {check_in}
+    Дата выезда: {check_out}
+    Количество гостей: {guests}
+    """
+
+    msg.attach(MIMEText(body, 'plain'))
+
+    try:
+        # Установка соединения с SMTP сервером
+        server = smtplib.SMTP_SSL(smtp_server, smtp_port)
+        server.login(smtp_login, smtp_password)
+        server.send_message(msg)
+        server.quit()
+        print("Email sent successfully")
+    except Exception as e:
+        print(f"Failed to send email: {e}")
 
 # def send_email(name, phone, email, message, check_in, check_out, guests):
 #     smtp_server = "smtp.timeweb.ru"
