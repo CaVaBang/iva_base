@@ -160,6 +160,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var modalCheckOut = document.getElementById("modalCheckOut");
     var modalGuests = document.getElementById("modalGuests");
 
+    nameInput.setAttribute('autocomplete', 'off');
+    phoneInput.setAttribute('autocomplete', 'off');
+    emailInput.setAttribute('autocomplete', 'off');
+    messageInput.setAttribute('autocomplete', 'off');
+
     function formatDate(date) {
         var parts = date.split('/');
         return parts[2] + '-' + parts[1] + '-' + parts[0]; // Преобразование в формат YYYY-MM-DD
