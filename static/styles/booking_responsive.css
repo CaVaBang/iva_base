@@ -265,10 +265,15 @@
 	{
 		display: none;
 	}
-	.header_phone
-	{
-		display: none !important;
-	}
+    .header_phone {
+        padding: 5px 10px; /* Уменьшаем внутренние отступы */
+        font-size: 14px; /* Уменьшаем размер шрифта */
+        width: 80%; /* Примерное значение для уменьшенной ширины */
+        height: auto; /* Обновляем высоту */
+    }
+    .header_phone span {
+        font-size: 12px; /* Уменьшаем размер шрифта в span */
+    }
 	.menu_book
 	{
 		display: block;
