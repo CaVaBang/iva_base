@@ -73,7 +73,7 @@ def submit_form():
 
 def send_email(name, phone, email, message, check_in, check_out, guests):
     smtp_server = "smtp.timeweb.ru"
-    port = 465  # Для SSL
+    port = 25  # Для SSL
     sender_email = "cj34869@cj34869.tw1.ru"
     sender_password = "igYz6qO2UP@!"
     admin_email = "musnigga@mail.ru"
