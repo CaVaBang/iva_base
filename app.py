@@ -73,7 +73,7 @@ def submit_form():
 
 def send_email(name, phone, email, message, check_in, check_out, guests):
     smtp_server = "smtp.timeweb.ru"
-    port = 25  # Для SSL
+    port = 25  # Или 2525 для STARTTLS
     sender_email = "cj34869@cj34869.tw1.ru"
     sender_password = "igYz6qO2UP@!"
     admin_email = "musnigga@mail.ru"
@@ -93,12 +93,7 @@ def send_email(name, phone, email, message, check_in, check_out, guests):
             f"Guests: {guests}\n")
     msg.attach(MIMEText(body, 'plain'))
 
-    try:
-        # Настройка и отправка email
-        server = smtplib.SMTP_SSL(smtp_server, port)
+    with smtplib.SMTP(smtp_server, port) as server:
+        server.starttls()
         server.login(sender_email, sender_password)
         server.sendmail(sender_email, admin_email, msg.as_string())
-        server.quit()
-        print("Email sent to admin successfully")
-    except Exception as e:
-        print(f"Failed to send email: {e}")
