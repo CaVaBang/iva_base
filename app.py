@@ -66,34 +66,34 @@ def submit_form():
         cursor.execute(sql, (name, phone, email, message, check_in, check_out, guests))
         connection.commit()
 
-    send_email(name, phone, email, message, check_in, check_out, guests)
+    #send_email(name, phone, email, message, check_in, check_out, guests)
 
     return '', 200
 
 
-def send_email(name, phone, email, message, check_in, check_out, guests):
-    smtp_server = "smtp.timeweb.ru"
-    port = 25  # Или 2525 для STARTTLS
-    sender_email = "cj34869@cj34869.tw1.ru"
-    sender_password = "igYz6qO2UP@!"
-    admin_email = "musnigga@mail.ru"
-
-    # Создание MIME сообщения
-    msg = MIMEMultipart()
-    msg['From'] = sender_email
-    msg['To'] = admin_email
-    msg['Subject'] = "New Booking Received"
-    body = (f"New booking details:\n\n"
-            f"Name: {name}\n"
-            f"Phone: {phone}\n"
-            f"Email: {email}\n"
-            f"Message: {message}\n"
-            f"Check-in: {check_in}\n"
-            f"Check-out: {check_out}\n"
-            f"Guests: {guests}\n")
-    msg.attach(MIMEText(body, 'plain'))
-
-    with smtplib.SMTP(smtp_server, port) as server:
-        server.starttls()
-        server.login(sender_email, sender_password)
-        server.sendmail(sender_email, admin_email, msg.as_string())
+# def send_email(name, phone, email, message, check_in, check_out, guests):
+#     smtp_server = "smtp.timeweb.ru"
+#     port = 25  # Или 2525 для STARTTLS
+#     sender_email = "cj34869@cj34869.tw1.ru"
+#     sender_password = "igYz6qO2UP@!"
+#     admin_email = "musnigga@mail.ru"
+#
+#     # Создание MIME сообщения
+#     msg = MIMEMultipart()
+#     msg['From'] = sender_email
+#     msg['To'] = admin_email
+#     msg['Subject'] = "New Booking Received"
+#     body = (f"New booking details:\n\n"
+#             f"Name: {name}\n"
+#             f"Phone: {phone}\n"
+#             f"Email: {email}\n"
+#             f"Message: {message}\n"
+#             f"Check-in: {check_in}\n"
+#             f"Check-out: {check_out}\n"
+#             f"Guests: {guests}\n")
+#     msg.attach(MIMEText(body, 'plain'))
+#
+#     with smtplib.SMTP(smtp_server, port) as server:
+#         server.starttls()
+#         server.login(sender_email, sender_password)
+#         server.sendmail(sender_email, admin_email, msg.as_string())
