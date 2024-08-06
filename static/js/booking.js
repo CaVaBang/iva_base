@@ -155,7 +155,7 @@ $(document).ready(function()
 				items:3,
 				autoplay:true,
 				autoplayHoverPause:true,
-				loop:false,
+				loop:true,
 				smartSpeed:1200,
 				dots:false,
 				nav:false,

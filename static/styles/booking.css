@@ -563,6 +563,45 @@ section
 	margin-left: 9px;
 }
 
+.owl-carousel .owl-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.owl-carousel .owl-nav.disabled {
+    display: flex; /* Убедитесь, что навигация видна */
+}
+
+.owl-theme .owl-nav {
+    text-align: center; /* Это можно убрать, так как flexbox управляет выравниванием */
+}
+.owl-nav {
+    font-size: 40px;
+}
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+    background-color: transparent;
+    color: #000000;
+    padding: 20px;
+}
+.owl-theme .owl-nav [class*='owl-']:hover {
+    background: transparent;
+    color: #000000;
+    text-decoration: none;
+}
+.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next, .owl-carousel button.owl-dot {
+    background: none;
+    color: inherit;
+    border: transparent;
+    padding: 0 !important;
+    font: inherit;
+}
+.owl-carousel button:focus {
+    outline: none;
+}
+
 /*********************************
 5. Home
 *********************************/
@@ -1033,6 +1072,10 @@ button:focus {
 	font-size: 18px;
 	font-weight: 600;
 	color: #ffffff;
+}
+.booking_slider_container .owl-carousel .owl-stage-outer
+{
+	overflow: visible;
 }
 
 /*********************************

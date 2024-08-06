@@ -277,6 +277,10 @@ section
 {
 	height: 100%;
 }
+.booking_slider_container .owl-carousel .owl-stage-outer
+{
+	overflow: visible;
+}
 .slide
 {
 	height: 100%;
@@ -460,6 +464,49 @@ section
 .hamburger:hover i
 {
 	color: #1ab09f;
+}
+.booking_item_content
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding-left: 42px;
+	padding-right: 20px;
+	background: transparent;
+	padding-bottom: 114px;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transform: translateY(30px);
+	-moz-transform: translateY(30px);
+	-ms-transform: translateY(30px);
+	-o-transform: translateY(30px);
+	transform: translateY(30px);
+	-webkit-transition: all 800ms ease;
+	-moz-transition: all 800ms ease;
+	-ms-transition: all 800ms ease;
+	-o-transition: all 800ms ease;
+	transition: all 800ms ease;
+}
+.booking_item:hover .booking_item_content
+{
+	visibility: visible;
+	opacity: 1;
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+.booking_item_list ul li:not(:last-of-type)
+{
+	margin-bottom: 3px;
+}
+.booking_item_list ul li
+{
+	font-size: 18px;
+	font-weight: 600;
+	color: #ffffff;
 }
 
 /*********************************
