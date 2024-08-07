@@ -1089,6 +1089,7 @@ button:focus {
 .details:not(:last-child)
 {
 	margin-bottom: 73px;
+	margin-top: 150px;
 }
 .details_image
 {
