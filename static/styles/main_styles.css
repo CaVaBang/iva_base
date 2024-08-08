@@ -1002,6 +1002,10 @@ input:focus, textarea:focus {
     text-align: center;
     margin-top: 20px;
 }
+#thankYouMessage :nth-child(2)
+{
+    font-size: 16px;
+}
 
 #thankYouMessage .btn {
     display: block;
@@ -1573,12 +1577,17 @@ input:focus, textarea:focus {
 .modal-content {
     background-color: #fff;
     border-radius: 0;
-    width: 60%; /* Ширина модалки */
-    max-width: 900px; /* Максимальная ширина для больших экранов */
+    width: 80%; /* Ширина модалки */
+    max-width: 1000px; /* Максимальная ширина для больших экранов */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.modal-form > :nth-child(3)
+{
+    padding-top: 0px;
+    font-size: 14px;
 }
 
 .close {

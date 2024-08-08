@@ -113,6 +113,11 @@
 	{
 	    padding: 15px 10px 10px 20px;
 	}
+	.modal-content
+	{
+    width: 60%; /* Ширина модалки */
+    max-width: 700px; /* Максимальная ширина для больших экранов */
+    }
 }
 
 /************
@@ -130,9 +135,7 @@
 
 @media only screen and (max-width: 1024px)
 {
-    .modal-content {
-        width: 70%;
-}
+
 }
 
 /************
@@ -377,7 +380,11 @@
     }
     .modal-content {
         width: 90%;
-}
+    }
+    .modal-form > :nth-child(3)
+    {
+        font-size: 12px;
+    }
 }
 
 /************

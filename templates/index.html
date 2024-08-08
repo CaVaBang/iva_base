@@ -113,7 +113,8 @@
 		<div class="modal-content">
 			<form action="/submit_form" class="modal-form" id="modalForm" method="POST" novalidate>
 				<span class="close">&times;</span>
-				<p style="margin-bottom: 10px;">Оставьте свои контактные данные, для подтверждения бронирования</p>
+            	<p>Оставьте свои контактные данные для подтверждения бронирования.</p>
+            	<p style="margin-bottom: 10px; text-align: center;">Обращаем внимание - Бронирование вступает в силу после внесения предоплаты в размере 50% от стоимости оказываемых услуг.</p>
 				<div><input type="text" class="name" name="name" placeholder="Ваше имя:" required="required"/> </div>
 				<div><input type="tel" class="phone" name="phone" placeholder="Номер телефона:" required="required"/> </div>
 				<div><input type="email" class="email" name="email" placeholder="Email:" required="required"/> </div>
@@ -126,6 +127,7 @@
 			</form>
 			<div id="thankYouMessage" style="display: none; text-align: center;">
             	<p>Спасибо! Ваша заявка принята.</p>
+				<p>Мы свяжемся с вами в ближайшее время для подтверждения бронирования.</p>
 				<button id="closeModal" class="btn">Закрыть</button>
         	</div>
 		</div>
