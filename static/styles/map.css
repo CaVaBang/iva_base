@@ -1468,6 +1468,7 @@ button:focus {
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
     padding-top: 60px;
+    z-index: 1001; /* Для отображения модалки поверх owl carusel */
 }
 .modal-content {
     background-color: #fff;

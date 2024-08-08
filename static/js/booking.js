@@ -187,6 +187,16 @@ document.addEventListener('DOMContentLoaded', function () {
     var errorModal = document.getElementById("errorModal");
     var thankYouMessage = document.getElementById("thankYouMessage");
     var closeModal = document.getElementById("closeModal");
+    var bookNowButtonIds = [
+        "bookNowButton1",
+        "bookNowButton2",
+        "bookNowButton3",
+        "bookNowButton4",
+        "bookNowButton5",
+        "bookNowButton6",
+        "bookNowButton7",
+        "bookNowButton8"
+    ];
 
     // Скрытые поля в модальной форме
     var modalCheckIn = document.getElementById("modalCheckIn");
@@ -279,6 +289,16 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+
+    bookNowButtonIds.forEach(function(id) {
+        var bookNowButton = document.getElementById(id);
+        if (bookNowButton) { // Проверяем, что кнопка существует
+            bookNowButton.onclick = function(event) {
+                event.preventDefault(); // Предотвращаем переход по ссылке
+                modal.style.display = "block"; // Открываем модальное окно
+            }
+        }
+    });
 
     // Обработчик для закрытия модалки
     closeModal.onclick = function() {

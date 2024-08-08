@@ -101,10 +101,10 @@
 
 	<div id="myModal" class="modal">
 		<div class="modal-content">
-			<form action="#" class="modal-form" id="modalForm" novalidate>
+			<form action="/submit_form" class="modal-form" id="modalForm" novalidate>
 				<span class="close">&times;</span>
             	<p>Оставьте свои контактные данные для подтверждения бронирования.</p>
-            	<p style="margin-bottom: 10px; text-align: center;">Обращаем ваше внимание, что бронирование вступает в силу только после внесения предоплаты через администратора.</p>
+            	<p style="margin-bottom: 10px; text-align: center;">Обращаем внимание - Бронирование вступает в силу после внесения предоплаты в размере 50% от стоимости оказываемых услуг.</p>
 				<div><input type="text" class="name" name="name" placeholder="Ваше имя:" required="required"/> </div>
 				<div><input type="tel" class="phone" name="phone" placeholder="Номер телефона:" required="required"/> </div>
 				<div><input type="email" class="email" name="email" placeholder="Email:" required="required"/> </div>
@@ -154,7 +154,7 @@
 									</div>
 								</div>
 								<div class="booking_price">25000₽/Сутки</div>
-								<div class="booking_link"><a href="booking.html">Дом A-frame</a></div>
+								<div class="booking_link"><a href="#" id="bookNowButton1">Дом A-frame</a></div>
 							</div>
 
 							<!-- Slide -->
@@ -175,7 +175,7 @@
 									</div>
 								</div>
 								<div class="booking_price">10000₽/Сутки</div>
-								<div class="booking_link"><a href="booking.html">Шестиместные дома</a></div>
+								<div class="booking_link"><a href="#" id="bookNowButton2">Шестиместные дома</a></div>
 							</div>
 
 							<!-- Slide -->
@@ -197,7 +197,7 @@
 									</div>
 								</div>
 								<div class="booking_price">1500₽/День</div>
-								<div class="booking_link"><a href="booking.html">Бассейн</a></div>
+								<div class="booking_link"><a href="#" id="bookNowButton3">Бассейн</a></div>
 							</div>
 
 							<!-- Slide -->
@@ -216,7 +216,7 @@
 									</div>
 								</div>
 								<div class="booking_price">9000₽/День</div>
-								<div class="booking_link"><a href="booking.html">Беседка на 10 человек</a></div>
+								<div class="booking_link"><a href="#" id="bookNowButton4">Беседка на 10 человек</a></div>
 							</div>
 
 							<!-- Slide -->
@@ -235,7 +235,7 @@
 									</div>
 								</div>
 								<div class="booking_price">10000₽/День</div>
-								<div class="booking_link"><a href="booking.html">Беседка на 15 человек</a></div>
+								<div class="booking_link"><a href="#" id="bookNowButton5">Беседка на 15 человек</a></div>
 							</div>
 
 							<!-- Slide -->
@@ -256,7 +256,7 @@
 									</div>
 								</div>
 								<div class="booking_price">12000₽/День</div>
-								<div class="booking_link"><a href="booking.html">Малый зал на 15 человек</a></div>
+								<div class="booking_link"><a href="#" id="bookNowButton6">Малый зал на 15 человек</a></div>
 							</div>
 
 							<!-- Slide -->
@@ -277,7 +277,7 @@
 									</div>
 								</div>
 								<div class="booking_price">18000₽/День</div>
-								<div class="booking_link"><a href="booking.html">Большой зал на 30 человек</a></div>
+								<div class="booking_link"><a href="#" id="bookNowButton7">Большой зал на 30 человек</a></div>
 							</div>
 
 							<!-- Slide -->
@@ -292,7 +292,7 @@
 									</div>
 								</div>
 								<div class="booking_price">По запросу</div>
-								<div class="booking_link"><a href="booking.html">Катера и гидроциклы</a></div>
+								<div class="booking_link"><a href="#" id="bookNowButton8">Катера и гидроциклы</a></div>
 							</div>
 
 
@@ -347,7 +347,7 @@
 								<li>Зона отдыха на улице</li>
 							</ul>
 						</div>
-						<div class="book_now_button"><a href="#">Забронировать</a></div>
+						<div class="book_now_button"><a href="#" id="bookNowButton">Забронировать</a></div>
 					</div>
 				</div>
 			</div>
@@ -370,17 +370,17 @@
 				<!-- Details Content -->
 				<div class="col-xl-5 col-lg-6">
 					<div class="details_content">
-						<div class="details_title">Коттедж</div>
+						<div class="details_title">Шестиместные дома</div>
 						<div class="details_list">
 							<ul>
-								<li>10 000 ₽</li>
-								<li>До 6-ти спальных мест</li>
-								<li>2 комнаты</li>
-								<li>Беседка открытого типа</li>
-								<li>Мангальная зона</li>
-								<li>Сплит-система</li>
-								<li>Бесплатный WiFi</li>
-								<li>Заезд в 14:00, выезд в 12:00</li>
+								<li>• 10 000 ₽</li>
+								<li>• До 6-ти спальных мест</li>
+								<li>• 2 комнаты</li>
+								<li>• Беседка открытого типа</li>
+								<li>• Мангальная зона</li>
+								<li>• Сплит-система</li>
+								<li>• Бесплатный WiFi</li>
+								<li>• Заезд в 14:00, выезд в 12:00</li>
 							</ul>
 						</div>
 						<div class="details_long_list">
@@ -394,10 +394,8 @@
 								<li>Душ</li>
 								<li>Чайник</li>
 								<li>Обеденная зона</li>
-								<li>Обеденный стол</li>
 								<li>Зона отдыха на улице</li>
-								<li>Полотенца</li>
-								<li>Бельё</li>
+								<li>Постельное бельё</li>
 							</ul>
 						</div>
 						<div class="book_now_button"><a href="#">Забронировать</a></div>
@@ -417,32 +415,21 @@
 				<!-- Details Content -->
 				<div class="col-xl-5 col-lg-6 order-lg-1 order-2">
 					<div class="details_content">
-						<div class="details_title">A-frame</div>
+						<div class="details_title">Бассейн</div>
 						<div class="details_list">
 							<ul>
-								<li>25 000 ₽</li>
-								<li>До 8-ми спальных мест</li>
-								<li>VIP зона</li>
-								<li>2 этажа</li>
-								<li>Витражные окна</li>
-								<li>Сплит-система</li>
-								<li>Мангальная зона</li>
-								<li>Индивидуальная баня</li>
-								<li>Бассейн на 8 человек входит в стоимость</li>
-								<li>Заезд в 14:00, выезд в 12:00</li>
+								<li>• Стоимость за дневное пребывание с 10:00-21:00</li>
+								<li>• При аренде беседки или домика: 500 рублей с человека</li>
+								<li>• Дети до трех лет - бесплатно</li>
 							</ul>
 						</div>
 						<div class="details_long_list">
 							<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-								<li>Телевизор</li>
-								<li>Спутниковые каналы</li>
-								<li>Отопление</li>
-								<li>Диван</li>
-								<li>Гардероб/шкаф</li>
-								<li>Душ</li>
-								<li>Чайник</li>
-								<li>Обеденная зона</li>
-								<li>Обеденный стол</li>
+								<li>Шезлонги</li>
+								<li>Столы</li>
+								<li>Навесы</li>
+								<li>Душевые кабинки, туалеты</li>
+								<li>Раздевалки мужские и женские</li>
 								<li>Зона отдыха на улице</li>
 								<li>Полотенца</li>
 								<li>Бельё</li>
