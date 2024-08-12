@@ -45,6 +45,7 @@ $(document).ready(function()
 
 	initMenu();
 	initDatePicker();
+	initGallery();
 	initBookingSlider();
 
 	/* 
@@ -88,6 +89,47 @@ $(document).ready(function()
 			{
 				menu.toggleClass('active');
 			});
+		}
+	}
+
+	/*
+
+	7. Init Gallery
+
+	*/
+
+	function initGallery()
+	{
+		if($('.gallery_slider').length)
+		{
+			var gallerySlider = $('.gallery_slider');
+			gallerySlider.owlCarousel(
+			{
+				items:10,
+				loop:true,
+				autoplay:true,
+				dots:false,
+				nav:true,
+				smartSpeed:1200,
+				responsive:
+				{
+					0:{items:1},
+					576:{items:2},
+					768:{items:3},
+					992:{items:4}
+				}
+			});
+
+			if($('.colorbox').length)
+			{
+				$('.colorbox').colorbox(
+				{
+					rel:'colorbox',
+					photo: true,
+					maxWidth:'95%',
+					maxHeight:'95%'
+				});
+			}
 		}
 	}
 
