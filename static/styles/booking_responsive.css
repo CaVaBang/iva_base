@@ -212,6 +212,10 @@
     .details_content {
     padding-left: 20px;
     }
+    .gallery_item
+	{
+		height: calc(100vw / 3);
+	}
 }
 
 /************
@@ -289,6 +293,10 @@
 	.details_image{
         min-height: 400px;
     }
+    .gallery_item
+	{
+		height: calc(100vw / 2);
+	}
 }
 
 /************
@@ -300,6 +308,10 @@
 	.container_custom .container
 	{
 		max-width: 100%;
+	}
+	.gallery_item
+	{
+		height: calc(100vw - 15px);
 	}
 	h2
 	{
