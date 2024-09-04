@@ -75,7 +75,7 @@ def send_email(name, phone, email, message, check_in, check_out, guests):
     # Создание сообщения
     msg = MIMEMultipart()
     msg['From'] = smtp_login
-    msg['To'] = 'musnigga@mail.ru'
+    msg['To'] = 'ivuska30@mail.ru'
     msg['Subject'] = "Новая запись"
 
     # Текст сообщения
